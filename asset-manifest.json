@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/capstone_venia/static/css/main.2555b3fc.css",
-    "main.js": "/capstone_venia/static/js/main.0a03b407.js",
+    "main.js": "/capstone_venia/static/js/main.3ac42a57.js",
     "static/media/herobanner1.png": "/capstone_venia/static/media/herobanner1.e381db1c14abfc717006.png",
     "static/media/homebanner2.PNG": "/capstone_venia/static/media/homebanner2.a1790482e09d5a95c8d3.PNG",
     "static/media/prod3.PNG": "/capstone_venia/static/media/prod3.f02df85af06d33ca2ea7.PNG",
@@ -33,10 +33,10 @@
     "static/media/chevron-down.svg": "/capstone_venia/static/media/chevron-down.fadc45040e456e5cea02f3cd047ee412.svg",
     "static/media/chevron-left.svg": "/capstone_venia/static/media/chevron-left.90adf07fedb3ecf91519b196c2c4454f.svg",
     "main.2555b3fc.css.map": "/capstone_venia/static/css/main.2555b3fc.css.map",
-    "main.0a03b407.js.map": "/capstone_venia/static/js/main.0a03b407.js.map"
+    "main.3ac42a57.js.map": "/capstone_venia/static/js/main.3ac42a57.js.map"
   },
   "entrypoints": [
     "static/css/main.2555b3fc.css",
-    "static/js/main.0a03b407.js"
+    "static/js/main.3ac42a57.js"
   ]
 }
