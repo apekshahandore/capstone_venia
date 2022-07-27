@@ -3,18 +3,39 @@ import Button from "../Button/Button";
 import InputBox from "../ContactInfo/InputBox";
 import ContactInfo from "../ContactInfo/ContactInfo";
 const ShippingInformation=({accHandler})=>{
-const [firstName, setFirstName]= useState("");
-const [lastName, setLastName]= useState("");
+
+const [formData, setFormData]=useState({
+    email:" ", 
+    phoneNumber:" ",
+    firstName:" ",
+    lastName:" ",
+    add1:" ",
+    add2:" ",
+    city:" "
+
+});
+const inputHandler=(e)=>{
+    const name= e.target.name;
+    const value= e.target.value;
+    setFormData({...formData,[name]:value});
+}
     const submitHandler=(e)=>{
         e.preventDefault();
-        localStorage.setItem("firstName", firstName);
-        localStorage.setItem("lastName", lastName);
         alert("form save succesfully");
+        console.log(formData);
+        window.localStorage.setItem("formData", JSON.stringify(formData)); 
         accHandler();
+        setFormData({ email:" ", 
+        phoneNumber:" ",
+        firstName:" ",
+        lastName:" ",
+        add1:" ",
+        add2:" ",
+        city:" "})
     }
     return(
         <>   
-    <ContactInfo />
+    <ContactInfo inputHandler={inputHandler} formData={formData}/>
     <div className="shipping_info">
         <h3>1. Shipping Information</h3>
    
@@ -33,23 +54,48 @@ const [lastName, setLastName]= useState("");
         </div>
         <div className="aem-Grid aem-Grid--12 ">
             <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12" style={{paddingRight:"16px"}}>
-            <InputBox type="text" label="First Name" value={firstName} onChange={e=>setFirstName(e.target.value)}/>
+            <InputBox type="text" 
+            label="First Name" 
+            name="firstName" 
+            id="firstName" 
+            value={formData.firstName} 
+            onChange={inputHandler}/>
             </div>
             <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 " style={{paddingleft:"16px"}}>
-                <InputBox  type="text" label="Last Name" value={lastName} onChange={e=>setLastName(e.target.value)}/>
+                <InputBox  type="text" 
+                label="Last Name" 
+                name="lastName" 
+                id="lastName" 
+                value={formData.lastName} 
+                onChange={inputHandler}/>
             </div>
         </div>
         <div className="aem-Grid aem-Grid--12 ">
             <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12" style={{paddingRight:"16px"}}>
-            <InputBox type="text" label="Street Address"/>
+            <InputBox 
+            type="text"  
+            name="add1" 
+            id="add1" 
+            value={formData.add1} 
+              onChange={inputHandler}
+            label="Street Address"/>
             </div>
             <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 " style={{paddingleft:"16px"}}>
-                <InputBox  type="text" label="Street Address 2"/>
+                <InputBox  type="text" 
+                name="add2" id="add2" 
+                value={formData.add2} 
+                onChange={inputHandler}
+                label="Street Address 2"/>
             </div>
         </div>
         <div className="aem-Grid aem-Grid--12 ">
             <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12" style={{paddingRight:"16px"}}>
-            <InputBox type="text" label="City"/>
+            <InputBox type="text" 
+            name="city" 
+            id="city" 
+            value={formData.city} 
+            onChange={inputHandler}
+            label="City"/>
             </div>
             <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12 " style={{paddingRight:"16px"}}>
             <label>State<br />

@@ -4,11 +4,19 @@ import InputBox from "../ContactInfo/InputBox";
 
 const PaymentInfo=({accPay})=>{
 
-   
+    let newObject = window.localStorage.getItem("formData");
+    console.log(JSON.parse(newObject));
+    const getData = JSON.parse(newObject);
 
 return(<>
-    <ShippingDetails heading="Shipping Information"/>
-    <ShippingDetails heading="Shipping Method"/>
+   <ShippingDetails
+        heading="Shipping Information"
+        email={getData.email}
+        contactDetails={getData.phoneNumber}
+        fullName={getData.firstName + getData.lastName}
+        address= {getData.add1 + getData.add2 + getData.city +" "+getData.state + getData.Zip }
+        /> 
+    <ShippingDetails heading="Shipping Method" shippingData={localStorage.getItem("shippingData")}/>
     <div className="payment_info">
            
         <h3>3. Payment Information</h3>
