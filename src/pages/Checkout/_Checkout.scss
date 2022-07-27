@@ -1,0 +1,36 @@
+.checkout{
+   
+    .checkout_heading{
+        padding: 33px 0 40px 0;
+        text-align: center;
+        h1{
+            padding-bottom: 10px;
+            font: normal normal 600 48px/45px Source Serif Pro;
+        }
+    }
+    .border_link{
+        background-color:$primary-brand;
+        width: 102px;
+        height: 8px;
+        border: none;
+    }
+    .calc_btn{
+        display: none;
+    }
+    .paypal_btn{
+        display: none;
+    }
+    .checkout_form{
+        padding-right: 32px;
+        h2{
+            font: normal normal 600 36px/30px Source Serif Pro;
+            color: #172026;
+        }
+    }
+  
+    .product_summary{
+        padding: 32px 24px 0 32px;
+    }
+ 
+   
+}

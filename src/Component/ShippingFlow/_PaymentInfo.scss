@@ -1,0 +1,71 @@
+.payment_info{
+    form{
+        label{
+            padding: 32px 0 8px 0;
+            font: normal normal 600 16px/24px Muli;
+            color: #181C24;
+        }
+        input{
+            width: 100%;
+            padding: 11px 0 13px 12px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 2px solid #B5B7BC;
+            border-radius: 8px;
+            margin-bottom: 32px;
+        
+        }
+        .date_inputBox{
+            padding-right: 12px;
+        }
+        .cvv_inputBox{
+            padding-left: 12px;
+        }
+        
+        .radio_control{
+            padding-top: 26px;
+            input{
+                accent-color: #E26A2C;
+                border: 2px solid #E26A2C;  
+                width: 24px;
+                height: 24px;
+              
+            }
+            label{
+                padding-left: 15px;
+                font: normal normal normal 16px/24px Muli;
+                color: #172026;
+            }
+        }
+        .checkbox_control{
+            input{
+                accent-color: #E26A2C;
+                border: 2px solid #E26A2C;  
+                width: 24px;
+                height: 24px;
+              
+            }
+            label{
+                padding-left: 15px;
+                font: normal normal normal 16px/24px Muli;
+                color: #172026;
+            }  
+        }
+        .action{
+            padding: 48px 0;
+            display: flex;
+            justify-content: center;
+
+           .shipping_button{
+            border: 2px solid #D4703D;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            color: #D4703D;
+           }
+        }
+        .paypal_box{
+            border-top: 1px solid grey;
+            border-bottom: 1px solid grey;
+  
+        }
+    }
+  
+}

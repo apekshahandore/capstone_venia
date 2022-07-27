@@ -1,0 +1,31 @@
+.signIn_summary{
+    padding: 24px 32px;
+    border: 1px solid #D1D3D6;
+    border-radius: 2px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .signIn_heading{
+        flex-basis: 60%;
+        h3{
+            font: normal normal 600 20px/25px Muli;
+            color: #172026;
+            max-width: 100%;
+        }
+    }
+  
+    .signIn_action{
+        flex-basis: 40%;
+        // padding: 7% 0;
+    
+        .signIn_button{
+            padding: 11px 30px 11px 33px;
+            text-transform: uppercase;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 2px solid #D4703D;
+            color: #D4703D;
+        }
+    }
+   
+} 

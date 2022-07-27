@@ -1,0 +1,181 @@
+
+
+.product_image{
+.category_left{
+  display: none;
+}
+  .images_column{
+    padding-right: 17px;
+    figure{
+      // border: 1px solid $gray-l1;
+      &:not(:last-child){
+      margin-bottom: 14px;
+    
+    }
+      img{
+        height:110px;
+        padding: 0.5em;
+     
+      }
+     
+    }
+  
+    button{
+      height:30px;
+      width: 100%;
+      background:transparent;
+      border: none;
+      img{
+        padding: 0.8em;
+      
+      }
+  
+    }
+  }
+  .main_image{
+    figure{
+      // border: 1px solid $gray-l1;
+      img{
+        height:680px;
+        // padding: 3em;
+      }
+    }
+  }
+ 
+  
+}
+.product_details{
+  padding-left: 37px;
+  .category{
+    a{
+      @include font-two;
+    }
+  }
+  h1{
+ 
+    font: normal normal 600 36px/45px Source Serif Pro;
+    padding-top: 20px;
+  
+
+  }
+  h4{
+    @include font-four;
+    padding: 8px 0 17px 0;
+ 
+
+  }
+
+    .stars-outer {
+        position: relative;
+        display: inline-block;
+    
+      }
+      
+      .stars-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 0;
+      }
+      
+      .stars-outer::before {
+        content: '\f005  \f005  \f005  \f005  \f005';
+        font-family: 'FontAwesome';
+        font-weight: 500;
+        font-size: 16px;
+        color: #ccc;
+      }
+      
+      .stars-inner::before {
+        content: '\f005  \f005  \f005  \f005  \f005';
+        font-size: 16px;
+        font-family: 'FontAwesome';
+        font-weight: 500;
+        color:black;
+      }
+      .number-rating {
+        font-size: $font-size-14;
+        font-weight: $font-weight-600;
+        line-height:$line-spacing-24 ; 
+        color: $black;
+       }
+      .prod_description{
+        padding: 18px 0;
+        border-bottom: 1px solid $border-color;
+        
+        p{
+          @include font-two;
+          
+        
+          button.read_more{
+              border: none;
+              background: none;
+              @include font;
+              text-decoration: underline;
+              
+            }
+          
+          
+        }
+    
+      }
+      .filter_head{
+        @include font-four;
+        padding-top: 16px;
+      }
+     .action{
+      display: flex;
+      text-align: center;
+     }
+   
+      .filter_container{
+        display: flex;
+        .color_box{
+          @include filterBox;
+        }
+        .size_box{
+          @include filterBox;
+          border: 2px solid $gray-m1;
+          text-align: center;
+          font: normal normal 600 16px/20px Muli;
+          background-color: $white;
+         
+         
+        
+      }
+     
+        button{
+          border-radius: 50%;
+          height: 32px;
+          width: 32px;
+          border: 1px solid $gray-l1;
+        }
+        input{
+          border-radius: 5px;
+          height: 32px;
+          width: 114px;
+          border: 1px solid $gray-l1;
+          margin: 0 12px;
+          text-align: center;
+          margin-bottom: 40px;
+        
+      }
+    }
+    
+      
+     .product_response{
+            display: flex;
+            padding: 24px 0 16px 78px;
+                a{ 
+                  @include font;
+                  padding-right: 38px;
+                    img{
+                        width: 18px;
+                        height: 16px;
+                        margin-right: 9px;
+                    }}
+        }
+}
+

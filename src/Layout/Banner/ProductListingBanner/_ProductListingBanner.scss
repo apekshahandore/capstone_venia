@@ -1,0 +1,45 @@
+
+
+.main_banner{
+    
+ 
+    .leftside_banner{
+        background-color:$black;
+        color:$white ;
+        height: 352px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+  
+    h1 {
+        font: normal normal 600 48px/60px Source Serif Pro;
+            }
+        h2.hide_head {
+            display: none;
+       
+         }
+
+    
+    
+    
+    .head_border{
+       background-color:$primary-brand;
+        width:108px; 
+        height:8px;
+        margin-top: 3rem;
+    }
+  
+    }
+   
+    .rightside_banner{
+        padding:16px 0 ;
+        img{
+            object-fit: fill;
+            height: 320px;
+        }
+    }
+}
+

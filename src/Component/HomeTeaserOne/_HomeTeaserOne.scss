@@ -1,0 +1,67 @@
+.teaserbanner_one{
+//    margin: 48px 0;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    align-items: stretch;
+    display: flex;
+
+    .teaserbanner_content{
+        padding:40px 0 56px 100px;
+        h1{
+            font: normal normal 600 48px/60px Source Serif Pro;
+            color: #172026;
+            max-width: 100%;
+        }
+        strong{
+           
+            padding-top: 8px;
+            font: normal normal 600 20px/25px Muli;
+            color: #172026;
+            max-width: 100%;
+        }
+        p{
+           
+            padding: 16px 0 24px 0;
+            font: normal normal normal 14px/24px Muli;
+            color: #172026;
+            max-width: 100%;
+        }
+        .action{
+            display: flex;  
+            align-items: center;
+            
+             
+        }
+       .shop_collection{
+        padding: 9px 42px;
+        color:$primary-brand;
+        border: 1px solid $primary-brand;
+        background-color: #fff;
+        margin-right: 10px;
+     
+    }
+    .border_box{
+        display: flex;
+        justify-content: start;
+        text-align: center;
+        padding-top: 56px;
+        .border{
+            width: 102px;
+            height: 8px;
+            background-color: $primary-brand;
+           
+        }
+    }
+   
+    }
+    .teaserbanner_image{
+     
+      background-image: url("../../Images/homebanner2.PNG");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      min-height: 100%;
+      float: none;
+      
+       
+    }
+}

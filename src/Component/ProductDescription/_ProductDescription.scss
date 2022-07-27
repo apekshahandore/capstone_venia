@@ -1,0 +1,55 @@
+@use "../../Style/Common/variables";
+.prod_Description{
+    .mainprod_head{
+        padding-top: 50px;
+    }
+   
+    p{
+        font: normal normal normal 16px/24px Muli;
+        max-width: 100%;
+    }
+    h1{
+        font: normal normal 600 36px/45px Source Serif Pro;
+       
+    }
+    h5{
+        padding-bottom: 16px;
+        font: normal normal 600 20px/25px Muli;
+    }
+    .right_details{
+        padding-top: 24px;
+        button{
+            background-color: $primary-brand;
+            width: 102px;
+            height: 8px;
+            border: none;
+            display: block;
+            margin-top: 32px;
+        }
+    }
+    .left_details{
+        padding-left: 37px;
+        padding-top: 24px;
+        a{ 
+            font: normal normal 600 16px/20px Muli;
+            color:$black;
+          
+              img{
+                  width: 24px;
+                  height: 24px;
+                  margin-right: 16px;
+                  vertical-align: middle;
+              }
+        }
+    button{
+        display: none;
+        background-color: $primary-brand;
+        width: 102px;
+        height: 8px;
+        border: none;
+       
+    }
+} 
+      
+}
+

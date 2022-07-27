@@ -1,0 +1,32 @@
+.contact_info{
+    padding: 20px 0 40px 0;
+    h3{
+        font: normal normal 600 20px/25px Muli;
+        color: #172026;
+    }
+    p{
+        padding-top: 8px;
+        font: normal normal normal 16px/25px Muli;
+        color: #172026;
+    }
+    form{
+        padding-top: 16px;
+        label{
+            padding: 16px 0 8px 0;
+            font: normal normal 600 16px/24px Muli;
+            color: #181C24;
+        }
+        input{
+            font: normal normal normal 16px/19px Muli;
+            color: #91959C;
+           width: 100%;
+            padding: 11px 0 13px 12px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 2px solid #B5B7BC;
+            border-radius: 8px;
+        
+        }
+    }
+   
+   
+}
