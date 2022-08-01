@@ -1,10 +1,7 @@
 import React, {useState} from "react";
 const FilterContainer=({filterProduct})=>{
     const [isChosen, setIsChosen] = useState(false);
-    // const clickedCheckbox = () => {
-    //     setIsChosen(false);
-    //    
-    //   };
+
 return(
 <div className="filter_aside">
 <div className="filter_container">
@@ -14,23 +11,37 @@ return(
     <div className="attribute">  
         <h6>Categories</h6>
         <div className="checkbox"> 
-            <input type="checkbox" id="chk1-label" onClick={()=>{ setIsChosen(!isChosen);
-        filterProduct("jewelery");}}/> 
+            <input type="checkbox"
+             id="chk1-label"
+             name="jewelery"
+             onChange={()=>{ setIsChosen(!isChosen);
+            filterProduct("jewelery");}}
+            /> 
             <label htmlFor="chk1-label" className="checkbox">Jewellery</label>
         </div>
         <div className="checkbox"> 
-            <input type="checkbox" id="chk2-label"  onClick={()=>{ setIsChosen(!isChosen);
-        filterProduct("electronics");}}/> 
+            <input type="checkbox" 
+            id="chk2-label"  
+            name="electronics" 
+            onChange={()=>{ setIsChosen(!isChosen);
+            filterProduct("electronics");}}/> 
             <label htmlFor="chk2-label" className="checkbox">Electronics</label>
         </div>
         <div className="checkbox"> 
-            <input type="checkbox" id="chk3-label"  onClick={()=>{ setIsChosen(!isChosen);
-        filterProduct("men's clothing");}}/> 
+            <input type="checkbox" 
+            id="chk3-label"  
+            name="men's clothing" 
+            onChange={()=>{ setIsChosen(!isChosen);
+            filterProduct("men's clothing");}}
+            /> 
             <label htmlFor="chk3-label" className="checkbox">Men's Clothing</label>
         </div>
         <div className="checkbox"> 
-            <input type="checkbox" id="chk4-label"  onClick={()=>{ setIsChosen(!isChosen);
-        filterProduct("women's clothing");}}/> 
+            <input type="checkbox" 
+            id="chk4-label"  
+            name="women's clothing" 
+            onChange={()=>{ setIsChosen(!isChosen);
+            filterProduct("women's clothing");}}/> 
             <label htmlFor="chk4-label" className="checkbox">Women's Clothing</label>
         </div>
         <div className="checkbox"> 

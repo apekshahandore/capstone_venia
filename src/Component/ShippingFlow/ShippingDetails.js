@@ -1,6 +1,6 @@
 import editIcon from "../../Images/edit-2.svg";
 import Button from "../Button/Button";
-const ShippingDetails=({heading, contactDetails, email,address,fullName ,shippingData})=>{
+const ShippingDetails=({heading, contactDetails, email,address,fullName ,shippingData,cvvNumber,credit})=>{
     return(  <div className="aem-Grid aem-Grid--12 shipInfo_details">
 
     <div className="shipInfo_details_top">
@@ -14,10 +14,13 @@ const ShippingDetails=({heading, contactDetails, email,address,fullName ,shippin
          <p>{email}</p>
          <p>{contactDetails}</p>
          <p>{shippingData}</p>
+         <p>{credit}</p>
+         <p>Visa ending in {cvvNumber}</p>
         </div>
         <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
             <p>{fullName}</p>
             <p>{address}</p>
+         
         </div>
     </div>
     </div> );

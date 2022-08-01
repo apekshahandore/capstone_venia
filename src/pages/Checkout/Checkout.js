@@ -34,14 +34,17 @@ const Checkout=()=> {
             <div className='aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 checkout_form'>
             <h2>Guest Checkout</h2>
             {/* <ContactInfo /> */}
+         
                 {isActive &&  <ShippingInformation accHandler={accHandler}/>}
+               
                 {isShow &&  <ShippingMethod acctwoHandler={acctwoHandler}/>}
+              
                 {display &&  <PaymentInfo accPay={accPay}/>}
                 {orderSummary && <ReviewInfo />}
            
             
             </div>
-            <SignInCheckout />
+            {isActive && <SignInCheckout />} 
             <ProductCalculation />
    
        

@@ -37,7 +37,7 @@ const ProductListing=()=>{
             const productList = data.filter((val)=>val.category === item);
             setFilter(productList);
         }
-     
+   
         const sortProduct=(event)=>{
         
             if(event.target.value === "lowtohigh"){
@@ -47,8 +47,7 @@ const ProductListing=()=>{
             }else{
             setFilter(data);
             }
-            
-            
+     
         }
 
     return(
@@ -59,7 +58,7 @@ const ProductListing=()=>{
         <ProdutListHeader totalProducts={totalProducts} sortProduct={sortProduct} lowToHigh={sortProductLTH} highToLow={sortProductHTL}/>
       
         <aside className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--tablet--3 aem-GridColumn--phone--hide">
-         <FilterContainer filterProduct={filterProduct}/>
+         <FilterContainer filterProduct={filterProduct} />
         </aside>
         
         <main className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--tablet--9 aem-GridColumn--phone--12">

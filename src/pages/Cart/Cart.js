@@ -18,7 +18,8 @@ const Cart=()=>{
         return(<Accordion key={list.id} leftHead={list.leftHead} rightHead={list.rightHead}/>)
     })
     return(<>
-    <div className='aem-Grid aem-Grid--12 container'>
+    <section className='aem-Grid aem-Grid--12 container'>
+    <div className='cart'>
       <div className='cart_heading'>
         <h1>Your Shopping Bag</h1>
         <button></button>
@@ -43,8 +44,8 @@ const Cart=()=>{
     </div>)
       }
    
-       
-        </div>
+      </div>
+        </section>
       
     </>)
 }

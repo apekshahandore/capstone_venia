@@ -1,8 +1,8 @@
-const Button=({text, onClick,className, img, arialabel,text1})=>{
+const Button=({text, onClick,className, img, arialabel,text1,type})=>{
     return (<>
-                <button  aria-label={arialabel} className={className} onClick={onClick} type="button">
+                <button type= {type} aria-label={arialabel} className={className} onClick={onClick}>
                 {img ?<img src={img} alt=" "/>:null  }
-                <span>{text}</span><span style={{display:"none"}}>{text1}</span>
+                <span className="btn_fulltext">{text}</span><span className="btn_mobiletext" >{text1}</span>
                 </button>
              </>);
              }

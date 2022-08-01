@@ -1,9 +1,28 @@
+import React,{useState} from "react";
 import ShippingDetails from "./ShippingDetails";
 import Button from "../Button/Button";
 import InputBox from "../ContactInfo/InputBox";
 
 const PaymentInfo=({accPay})=>{
-
+    const [paymentData, setPaymentData]=useState({
+        cardName:" ",
+        cardNumber:" ",
+        cvv:" ",
+        credit:" ",
+    });
+    const inputHandler=(e)=>{
+        const name= e.target.name;
+        const value= e.target.value;
+        setPaymentData({...paymentData,[name]:value});
+    }
+        const submitHandler=(e)=>{
+            e.preventDefault();
+            alert("form save succesfully");
+            console.log(paymentData);
+            window.localStorage.setItem("paymentData", JSON.stringify(paymentData)); 
+            accPay();
+            setPaymentData({ })
+        }
     let newObject = window.localStorage.getItem("formData");
     console.log(JSON.parse(newObject));
     const getData = JSON.parse(newObject);
@@ -22,26 +41,54 @@ return(<>
         <h3>3. Payment Information</h3>
        <form>
         <div className="radio_control">
-            <input type="radio" name="styles" id="credit" checked />
-            <label for="credit">Credit Card</label>
+            <input type="radio" 
+            name="credit" 
+            id="credit" 
+            value="Credit Card"  
+            defaultChecked={paymentData.credit === "Credit Card"}
+            onClick={inputHandler} 
+            checked />
+            <label htmlFor="credit">Credit Card</label>
         </div>
         <div className="aem-Grid aem-Grid--12 ">
             <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
-            <InputBox type="email" label="Name on Card"/>
+            <InputBox type="text"
+                label="Name on Card"
+                name="cardName" 
+                id="cardName" 
+                value={paymentData.cardName} 
+                onChange={inputHandler}
+             />
             </div>
         </div>
         <div className="aem-Grid aem-Grid--12 ">
             <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
-            <InputBox type="email" label="Credit Card Number"/>
+            <InputBox type="number" 
+                label="Credit Card Number"
+                name="cardNumber" 
+                id="cardNumber" 
+                value={paymentData.cardNumber} 
+                onChange={inputHandler}
+            />
             </div>
         </div>
         <div className="aem-Grid aem-Grid--12">
-            <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12 date_inputBox">
+            <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--8 date_inputBox ">
             <InputBox type="date" label="Expiration Date"/>
             </div>
-            <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--12 cvv_inputBox">
-            <InputBox type="text" label="CVV"/>
+            <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--3 cvv_inputBox">
+            <InputBox 
+                type="text" 
+                label="CVV"
+                name="cvv" 
+                id="cvv" 
+                value={paymentData.cvv} 
+                onChange={inputHandler}
+            />
+          
             </div>
+           
+            
         </div>
         <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--6 checkbox_control">
                 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
@@ -52,7 +99,7 @@ return(<>
             <label for="paypal">PayPal</label>
         </div>
             <div className="action">
-                <Button arialabel="shipping information" text="CONTINUE TO REVIEW ORDER" className="btn_lab shipping_button" onClick={accPay} />
+                <Button arialabel="shipping information" text="CONTINUE TO REVIEW ORDER" text1="CONTINUE" className="btn_lab shipping_button" onClick={submitHandler} />
             </div>
         </form>
       

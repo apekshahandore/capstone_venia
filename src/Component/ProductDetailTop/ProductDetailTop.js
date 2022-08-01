@@ -94,7 +94,10 @@ let [num, setNum] = useState(1);
         <Quantity  decNum={decNum} incNum={incNum} num={num} handleChange={handleChange}/>
 
         {/* add to cart button */}
+        <div className="addtocart">
         <Button text="ADD TO CART" arialabel="add to cart" className="btn_lab" onClick={()=>addProduct(product,num)}/>
+
+        </div>
 
         {/* product response */}
             <div className="product_response">

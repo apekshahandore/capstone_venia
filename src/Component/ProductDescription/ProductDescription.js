@@ -10,7 +10,11 @@ return(<>
         <div className="aem-GridColumn aem-GridColumn--default--12aem-GridColumn--tablet--12 aem-GridColumn--phone--12 right_details">
             <h5>Description</h5>
             <p>{description}</p>
-            <button></button>
+
+            <div className='border'>
+                <button></button>
+            </div>
+           
         </div>
 
    </div>

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Button from "../Button/Button";
 import InputBox from "../ContactInfo/InputBox";
 import ContactInfo from "../ContactInfo/ContactInfo";
@@ -7,13 +7,30 @@ const ShippingInformation=({accHandler})=>{
 const [formData, setFormData]=useState({
     email:" ", 
     phoneNumber:" ",
+    country:" ",
     firstName:" ",
     lastName:" ",
     add1:" ",
     add2:" ",
-    city:" "
+    state :" ",
+    city:" ",
+    zip:" ",
 
 });
+const [formErrors, setFormErrors] = useState({});
+const [isSubmit, setIsSubmit] = useState(false);
+
+const validate = (values) => {
+    const errors = {};
+ 
+    if (!values.firstName) {
+      errors.firstName = "firstName is required!";
+    }  if (!values.lastName) {
+        errors.lastName = "lastName is required!";
+      }
+    return errors;
+  };
+  
 const inputHandler=(e)=>{
     const name= e.target.name;
     const value= e.target.value;
@@ -21,30 +38,40 @@ const inputHandler=(e)=>{
 }
     const submitHandler=(e)=>{
         e.preventDefault();
+        setFormErrors(validate(formData));
+        setIsSubmit(true);
         alert("form save succesfully");
         console.log(formData);
         window.localStorage.setItem("formData", JSON.stringify(formData)); 
         accHandler();
+    
         setFormData({ email:" ", 
         phoneNumber:" ",
+        country:" ",
         firstName:" ",
         lastName:" ",
         add1:" ",
         add2:" ",
-        city:" "})
+        state :" ",
+        city:" ",
+        zip:" ",
+})
     }
+   
+
+   
     return(
         <>   
     <ContactInfo inputHandler={inputHandler} formData={formData}/>
     <div className="shipping_info">
         <h3>1. Shipping Information</h3>
    
-        <form className="shipping_information ">
+        <form className="shipping_information " onSubmit={submitHandler}>
         <div className="aem-Grid aem-Grid--12 ">
-            <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12" style={{paddingRight:"16px"}}>
+            <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 leftInputBox">
             <label>Country<br />
-                <select className="county-select" aria-label="country select">
-                    <option value="DEFAULT">United States</option>
+                <select className="county-select" aria-label="country select" name='country' value={formData.country} onChange={inputHandler}>
+                    <option value="United States">United States</option>
                     <option value="India">India</option>
                     <option value="Pakistan">Pakistan</option>
                     <option value="Japan">Japan</option>
@@ -53,25 +80,27 @@ const inputHandler=(e)=>{
             </div>
         </div>
         <div className="aem-Grid aem-Grid--12 ">
-            <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12" style={{paddingRight:"16px"}}>
+            <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 leftInputBox">
             <InputBox type="text" 
             label="First Name" 
             name="firstName" 
             id="firstName" 
             value={formData.firstName} 
             onChange={inputHandler}/>
+             <p>{formErrors.firstName}</p>
             </div>
-            <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 " style={{paddingleft:"16px"}}>
+            <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 rightInputBox">
                 <InputBox  type="text" 
                 label="Last Name" 
                 name="lastName" 
                 id="lastName" 
                 value={formData.lastName} 
                 onChange={inputHandler}/>
+                <p>{formErrors.lastName}</p>
             </div>
         </div>
         <div className="aem-Grid aem-Grid--12 ">
-            <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12" style={{paddingRight:"16px"}}>
+            <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 leftInputBox">
             <InputBox 
             type="text"  
             name="add1" 
@@ -80,8 +109,9 @@ const inputHandler=(e)=>{
               onChange={inputHandler}
             label="Street Address"/>
             </div>
-            <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 " style={{paddingleft:"16px"}}>
-                <InputBox  type="text" 
+            <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 rightInputBox">
+                <InputBox  
+                type="text" 
                 name="add2" id="add2" 
                 value={formData.add2} 
                 onChange={inputHandler}
@@ -89,32 +119,50 @@ const inputHandler=(e)=>{
             </div>
         </div>
         <div className="aem-Grid aem-Grid--12 ">
-            <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12" style={{paddingRight:"16px"}}>
-            <InputBox type="text" 
+            <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 leftInputBox">
+            <InputBox 
+            type="text" 
             name="city" 
             id="city" 
             value={formData.city} 
             onChange={inputHandler}
             label="City"/>
             </div>
-            <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12 " style={{paddingRight:"16px"}}>
+            <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12 rightInputBox">
             <label>State<br />
-            <select className="state-select" aria-label="state select">
-                    <option value="DEFAULT">California</option>
-                    <option value="India">Maharastra</option>
-                    <option value="Pakistan">Gujrat</option>
-                    <option value="Japan">Orisa</option>
-                    <option value="Pakistan">Rajasthan</option>
-                    <option value="Japan">Delhi</option>
+            <select className="state-select " aria-label="state select" name='state' value={formData.state} onChange={inputHandler}>
+                    <option value="California">California</option>
+                    <option value="Maharastra">Maharastra</option>
+                    <option value="Gujrat">Gujrat</option>
+                    <option value="Orisa">Orisa</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Delhi">Delhi</option>
                 </select>
                </label>
             </div>
-            <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--12 " style={{paddingleft:"16px"}}>
-                <InputBox  type="number" label="ZIP"/>
+            <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--12 rightInputBox">
+                <InputBox  
+                type="number" 
+                name="zip" 
+                id="zip" 
+                value={formData.zip} 
+                onChange={inputHandler}
+                size = "[0-9]{4}"
+                label="ZIP"
+              
+                />
             </div>
         </div>
         <div className="action">
-            <Button arialabel="shipping information" text="CONTINUE TO SHIPPING METHOD" text1="CONTINUE" className="btn_lab shipping_button" onClick={submitHandler}/>
+            <Button type="submit" arialabel="shipping information" text1="CONTINUE" text="CONTINUE TO SHIPPING METHOD" className="btn_lab shipping_button"/>
+        </div>
+        <div className='aem-Grid aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12 estimating'>
+                    <div className="section1">
+                        2. Shipping Method
+                    </div>
+                    <div className="section2">
+                        3. Payment Information
+                    </div>
         </div>
         </form>
     </div>

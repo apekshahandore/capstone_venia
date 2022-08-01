@@ -59,6 +59,9 @@
             border: 2px solid #D4703D;
             background: #FFFFFF 0% 0% no-repeat padding-box;
             color: #D4703D;
+            .btn_mobiletext{
+                display: none;
+            }
            }
         }
         .paypal_box{
@@ -67,5 +70,5 @@
   
         }
     }
-  
+ 
 }

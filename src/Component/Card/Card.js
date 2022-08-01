@@ -12,7 +12,7 @@ const Card=({title,price,img,id})=>{
     return( <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--6 aem-GridColumn--phone--6 card" onClick={handler}>
                     <figure className="img">
                      <img src={img} alt="Card image cap" />
-                </figure>
+                    </figure>
                 <div className="product-details">
                      <strong className="product-title">{productTitle}</strong>
                      <p className="product-price">${price}</p>
@@ -21,3 +21,4 @@ const Card=({title,price,img,id})=>{
             </div>)
 }
 export default Card;
+

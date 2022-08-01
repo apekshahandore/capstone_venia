@@ -51,11 +51,14 @@ const ProductCalculation=()=>{
         </div>
 
         <div className="calc_btn">
-        <Button className="btn_lab checkout_btn" text="CHECKOUT" img={lockImg} onClick={handler}/>
+            <Button className="btn_lab checkout_btn" text="CHECKOUT" img={lockImg} onClick={handler}/>
         </div> 
+       
         <div className="paypal_btn">
-            <img className="paypal_img" src={PP_BTN} alt="coffee"/>
+                <img className="paypal_img" src={PP_BTN} alt="coffee"/>
         </div>
+       
+       
         </div>
        
     );

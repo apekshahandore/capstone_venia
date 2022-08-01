@@ -1,5 +1,11 @@
 .contact_info{
-    padding: 20px 0 40px 0;
+    padding: 0 0 40px 0;
+    .leftInputBox{
+        padding-right: 16px;
+       }
+       .rightInputBox{
+        padding-left: 16px;
+       }
     h3{
         font: normal normal 600 20px/25px Muli;
         color: #172026;
