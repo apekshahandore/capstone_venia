@@ -5,6 +5,7 @@ import ProductCalculation from '../../Component/ProductCalculation/ProductCalcul
 import SingleCartItem from '../../Component/SingleCartItem/SingleCartItem';
 import { Link } from 'react-router-dom';
 import { accordionData } from '../../Data';
+
 const Cart=()=>{
  
     const cartItems = useSelector((st) => st.handleCart.items);
@@ -46,6 +47,7 @@ const Cart=()=>{
    
       </div>
         </section>
+    
       
     </>)
 }

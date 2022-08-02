@@ -3,7 +3,7 @@ import OrderItemContainer from "./OrderItemContainer";
 import Button from "../Button/Button";
 import { useNavigate } from "react-router-dom";
 
-const ReviewInfo=()=>{
+const ReviewInfo=({acctwoHandler,accHandler,accPay})=>{
 
       let navigate = useNavigate();
         //Change page
@@ -25,9 +25,18 @@ const ReviewInfo=()=>{
                         contactDetails={getData.phoneNumber}
                         fullName={getData.firstName + getData.lastName}
                         address= {getData.add1 + getData.add2 + getData.city +" "+getData.state + getData.Zip }
+                        onClick={accHandler}
                         /> 
-                        <ShippingDetails heading="Shipping Method" shippingData={localStorage.getItem("shippingData")}/>
-                        <ShippingDetails heading="Payment Information" cvvNumber={getpaymentData.cvv} credit={getpaymentData.credit}/>
+                        <ShippingDetails 
+                        heading="Shipping Method" 
+                        shippingData={localStorage.getItem("shippingData")}  
+                        onClick={acctwoHandler}/>
+                        <ShippingDetails 
+                        heading="Payment Information" 
+                        cvvNumber={getpaymentData.cvv} 
+                        credit={getpaymentData.credit}  
+                        onClick={accPay}      
+                        />
                         <OrderItemContainer />
                         <div className="action">
                         <Button arialabel="place order" text="Place Order" text1="CONTINUE" className="btn_lab placeorder_button" onClick={pageHandler}/>

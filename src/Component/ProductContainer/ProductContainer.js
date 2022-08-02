@@ -5,7 +5,7 @@ import Pagination from "../Pagination/Pagination";
 
 const ProductContainer=({filter, loading})=>{
     const [page, setPage]= useState(1);
-    const [cardsPerPage]=useState(9);
+    const [cardsPerPage]=useState(6);
  
     const indexOfLastcard =page * cardsPerPage;
     const indexOfFirstcard= indexOfLastcard - cardsPerPage;
@@ -15,8 +15,8 @@ const ProductContainer=({filter, loading})=>{
     const paginate = pageNumber => setPage(pageNumber);
 
     return(<>
-        <div className="aem-Grid aem-Grid--12 card-container" style={{paddingTop:"24px"}}>
-            {loading? <h1 className="loading_content" style={{padding:"24px", textAlign:"center"}}>Loading...</h1>:
+        <div className="aem-Grid aem-Grid--12 card-container">
+            {loading? <h1 className="loading_content">Loading...</h1>:
 
        // here is user currentposts insted of filter(cards data) because of pagination//
                  <> {currentPosts.map((val,index)=>{

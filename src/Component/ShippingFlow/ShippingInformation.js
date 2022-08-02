@@ -1,35 +1,25 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Button from "../Button/Button";
 import InputBox from "../ContactInfo/InputBox";
 import ContactInfo from "../ContactInfo/ContactInfo";
 const ShippingInformation=({accHandler})=>{
 
 const [formData, setFormData]=useState({
-    email:" ", 
-    phoneNumber:" ",
-    country:" ",
-    firstName:" ",
-    lastName:" ",
-    add1:" ",
-    add2:" ",
-    state :" ",
-    city:" ",
-    zip:" ",
-
+    email:"q_farhan@gmail.com", 
+    phoneNumber:"+1 (555) 229-3367",
+    country:"United States",
+    firstName:"Qadim",
+    lastName:"Farhan",
+    add1:"1098",
+    add2:"Wapello",
+    state :"California",
+    city:"Street",
+    zip:"91001",
+    
 });
-const [formErrors, setFormErrors] = useState({});
-const [isSubmit, setIsSubmit] = useState(false);
 
-const validate = (values) => {
-    const errors = {};
- 
-    if (!values.firstName) {
-      errors.firstName = "firstName is required!";
-    }  if (!values.lastName) {
-        errors.lastName = "lastName is required!";
-      }
-    return errors;
-  };
+
+
   
 const inputHandler=(e)=>{
     const name= e.target.name;
@@ -38,28 +28,26 @@ const inputHandler=(e)=>{
 }
     const submitHandler=(e)=>{
         e.preventDefault();
-        setFormErrors(validate(formData));
-        setIsSubmit(true);
-        alert("form save succesfully");
+      
         console.log(formData);
         window.localStorage.setItem("formData", JSON.stringify(formData)); 
         accHandler();
     
-        setFormData({ email:" ", 
-        phoneNumber:" ",
-        country:" ",
-        firstName:" ",
-        lastName:" ",
-        add1:" ",
-        add2:" ",
-        state :" ",
-        city:" ",
-        zip:" ",
+        setFormData({
+            email:" ", 
+            phoneNumber:" ",
+            country:" ",
+            firstName:" ",
+            lastName:" ",
+            add1:" ",
+            add2:" ",
+            state :" ",
+            city:" ",
+            zip:" ",
+
 })
     }
-   
-
-   
+  
     return(
         <>   
     <ContactInfo inputHandler={inputHandler} formData={formData}/>
@@ -77,6 +65,7 @@ const inputHandler=(e)=>{
                     <option value="Japan">Japan</option>
                 </select>
                 </label>
+                <span id="countryHelp"></span>
             </div>
         </div>
         <div className="aem-Grid aem-Grid--12 ">
@@ -87,7 +76,8 @@ const inputHandler=(e)=>{
             id="firstName" 
             value={formData.firstName} 
             onChange={inputHandler}/>
-             <p>{formErrors.firstName}</p>
+               <span id="firstNameHelp"></span>
+           
             </div>
             <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 rightInputBox">
                 <InputBox  type="text" 
@@ -96,7 +86,7 @@ const inputHandler=(e)=>{
                 id="lastName" 
                 value={formData.lastName} 
                 onChange={inputHandler}/>
-                <p>{formErrors.lastName}</p>
+            <span id="lastNameHelp"></span>
             </div>
         </div>
         <div className="aem-Grid aem-Grid--12 ">

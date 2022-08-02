@@ -9,7 +9,8 @@ const Card=({title,price,img,id})=>{
 
     let productTitle= title.split(' ').slice(0,3).join(' ');
 
-    return( <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--6 aem-GridColumn--phone--6 card" onClick={handler}>
+    return( 
+    <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--6 aem-GridColumn--phone--6 card" onClick={handler}>
                     <figure className="img">
                      <img src={img} alt="Card image cap" />
                     </figure>

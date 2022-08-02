@@ -45,7 +45,28 @@ export const category=[{
     name:"Electronics",
     description:"Lorem ipsum dolor sit amet",
 }]   
-
+export const filterCategories=[
+    {
+        id:"chk1-label",
+        name:"jewelery",
+        label:"Jewelery",
+    },
+    {
+        id:"chk2-label",
+        name:"electronics",
+        label:"Electronics",
+    },
+    {
+        id:"chk3-label",
+        name:"men's clothing",
+        label:"Men's Clothing",
+    },
+    {
+        id:"chk4-label",
+        name:"women's clothing",
+        label:"Women's Clothing",
+    },
+]
 export const leftMenu=[
     {
         id:"Nlm1", icon:search, alt:"search", label:"Search", link:" "

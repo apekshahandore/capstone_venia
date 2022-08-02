@@ -5,6 +5,7 @@ import {cartActions} from "../../Redux/handleCartSlice";
 import Rating from "../Rating/Rating";
 import ProdDesc from "./ProdDesc"
 import Quantity from "../Quantity/Quantity";
+import Carousel from "../Carousel/Carousel";
 
 const ProductDetailsTop=({title,price,rating,description,image, product})=>{
 const dispatch = useDispatch();
@@ -39,7 +40,7 @@ let [num, setNum] = useState(1);
         
             <div className="aem-Grid aem-Grid--12">
                 <div className="category_left">
-                    <a href="">Clothing</a> / <a href="">{product.category}</a> / <a href="">OuterWear</a>
+                    <a href=" ">Clothing</a> / <a href=" ">{product.category}</a> / <a href=" ">OuterWear</a>
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--tablet--hide aem-GridColumn--phone--hide images_column">
                     <figure> 
@@ -63,10 +64,13 @@ let [num, setNum] = useState(1);
                     </button>
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 main_image">
-                    <figure> 
-                    <img src={image} alt={title}/>  
-             
+                    <figure className="single_image"> 
+                        <img src={image} alt={title}/>  
                     </figure>
+                    <div className="prodGallary_images">
+                    <Carousel image={image} title={title}/>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -75,7 +79,7 @@ let [num, setNum] = useState(1);
         <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--6 aem-GridColumn--phone--12 product_details">
         {/* category */}
         <div className="category">
-         <a href="">Clothing</a> / <a href="">{product.category}</a> / <a href="">OuterWear</a>
+         <a href=" ">Clothing</a> / <a href=" ">{product.category}</a> / <a href=" ">OuterWear</a>
         </div>
         {/* product title */}
         <h1>{productTitle}</h1>

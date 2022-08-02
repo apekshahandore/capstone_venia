@@ -18,7 +18,7 @@
     }
 .homebanner_content{
     align-items: center;
-padding: 7rem 0;
+    padding: 7rem 0;
     h1{
         
         @include mainHeading;
@@ -31,7 +31,24 @@ padding: 7rem 0;
         @include font-two;
         max-width: 34rem;
     }
-   
+ 
+
+.dots_action {
+    display: none;
+    margin-top: 32px;
+    :first-child{
+        background-color: white;
+    } 
+    button {
+    border-radius: 50%;
+    background-color: #666666;
+    padding: 0.3em;
+    border: none;
+    margin-left: 20px;
+ 
+
+
+}}
 }
    
     .homebanner_image{
@@ -39,7 +56,7 @@ padding: 7rem 0;
       float: none;
       background-image: url("../../../Images/herobanner1.png");
         background-repeat: no-repeat;
-        background-size: 100% 120%;
+        background-size: 100% 160%;
         background-origin: border-box;
        
       

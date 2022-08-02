@@ -15,6 +15,7 @@ a{
 }
 nav{
     padding: 16px 0;
+
     .mobile_menu{
         display:none;
         width: 18px;
@@ -63,29 +64,46 @@ nav{
                 padding: 2px;
             }
           }
-          .cart_counter{
-            text-align: center;
-            font-size: 12px;
-            position: absolute;
-            top: 8px;
-            right: 120px;
-            width: 20px;
-            height: 20px;
-            color:$white;
-            background: $primary-m1;
-            border-radius: 50%;
+          .add-cart {
+            position: relative;
+            padding: 16px 0;
+            top: 16px;
+            img{
+                position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					-webkit-transform: translate(-50%, -50%);
+					-moz-transform: translate(-50%, -50%);
+					-ms-transform: translate(-50%, -50%);
+					-o-transform: translate(-50%, -50%);
+            }
+            .cart_counter{
             
-            &:hover, 
-            &:focus {
-            animation: pulse 1s;
-            box-shadow: 0 0 0 2em rgba($white,0);
-            }
-
-            @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 $white; 
-            }
-            }
-          }
+                position: absolute;
+					top: -20px;
+					right: -20px;
+					width: 22px;
+					height: 22px;
+                    font-size: 12px;
+					text-align: center;
+					vertical-align: middle;
+                    color:$white;
+                    background: $primary-m1;
+					border-radius: 50%;
+					-webkit-text-stroke-width: thick;
+                &:hover, 
+                &:focus {
+                animation: pulse 1s;
+                box-shadow: 0 0 0 2em rgba($white,0);
+                }
+    
+                @keyframes pulse {
+                0% { box-shadow: 0 0 0 0 $white; 
+                }
+                }
+              }}
+         
         } 
        
        

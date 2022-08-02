@@ -19,9 +19,14 @@ const HomeBanner=()=>{
             <h1>Shop the new Signature Collection</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lobortis mattis aliquam faucibus purus.</p>
             <Button aria-label="shop now" className="shop_now btn_lab" onClick={routeChange} text="Shop Now"/>
+            <div className="dots_action">
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
         </div>
         <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 homebanner_image">
-           
+ 
         </div>
     </section>);
 }

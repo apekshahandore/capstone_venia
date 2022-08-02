@@ -1,11 +1,11 @@
 import editIcon from "../../Images/edit-2.svg";
 import Button from "../Button/Button";
-const ShippingDetails=({heading, contactDetails, email,address,fullName ,shippingData,cvvNumber,credit})=>{
+const ShippingDetails=({heading, contactDetails, email,address,fullName ,shippingData,cvvNumber,credit,onClick})=>{
     return(  <div className="aem-Grid aem-Grid--12 shipInfo_details">
 
     <div className="shipInfo_details_top">
         <h4>{heading}</h4>
-        <Button arialabel="edit" text="Edit" img={editIcon} className="edit_button"/>
+        <Button arialabel="edit" text="Edit" img={editIcon} className="edit_button" onClick={onClick}/>
 
     </div>
    <div className="aem-Grid aem-Grid--12 shipInfo_details_bottom">
@@ -15,7 +15,8 @@ const ShippingDetails=({heading, contactDetails, email,address,fullName ,shippin
          <p>{contactDetails}</p>
          <p>{shippingData}</p>
          <p>{credit}</p>
-         <p>Visa ending in {cvvNumber}</p>
+         {cvvNumber ? <p>Visa ending in {cvvNumber}</p>:null  }
+        
         </div>
         <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
             <p>{fullName}</p>

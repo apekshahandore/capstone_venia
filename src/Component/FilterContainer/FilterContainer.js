@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {filterCategories} from "../../Data";
 const FilterContainer=({filterProduct})=>{
     const [isChosen, setIsChosen] = useState(false);
 
@@ -10,7 +11,20 @@ return(
     </div>
     <div className="attribute">  
         <h6>Categories</h6>
-        <div className="checkbox"> 
+        {
+            filterCategories.map((val)=>{
+                return(<div className="checkbox"> 
+                            <input type="checkbox"
+                            id={val.id}
+                            name={val.name}
+                            onChange={()=>{ setIsChosen(!isChosen);
+                            filterProduct(`${val.name}`);}}
+                            /> 
+                            <label htmlFor={val.id} className="checkbox">{val.label}</label>
+                        </div>);
+            })
+        }
+        {/* <div className="checkbox"> 
             <input type="checkbox"
              id="chk1-label"
              name="jewelery"
@@ -43,7 +57,7 @@ return(
             onChange={()=>{ setIsChosen(!isChosen);
             filterProduct("women's clothing");}}/> 
             <label htmlFor="chk4-label" className="checkbox">Women's Clothing</label>
-        </div>
+        </div> */}
         <div className="checkbox"> 
             <a href=" ">Show More</a>
         </div>

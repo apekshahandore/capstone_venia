@@ -45,7 +45,14 @@ return(
 
             <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--tablet--2 aem-GridColumn--phone--3 right_nav">
               <ul>
-                  <li><NavLink to="/cart"><img src={require('../../Images/shopping-bag.svg').default} alt='cart' /><span className="cart_counter">{totalQty}</span></NavLink></li>
+                  <li>
+                  <NavLink to="/cart">
+                  <span className="add-cart">
+                  <img src={require('../../Images/shopping-bag.svg').default} alt='cart' />
+                  <span className="cart_counter">{totalQty}</span>
+                  </span>
+                  </NavLink>
+                  </li>
               </ul>
             </div>
             

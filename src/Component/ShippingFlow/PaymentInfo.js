@@ -3,7 +3,7 @@ import ShippingDetails from "./ShippingDetails";
 import Button from "../Button/Button";
 import InputBox from "../ContactInfo/InputBox";
 
-const PaymentInfo=({accPay})=>{
+const PaymentInfo=({accPay,acctwoHandler,accHandler})=>{
     const [paymentData, setPaymentData]=useState({
         cardName:" ",
         cardNumber:" ",
@@ -17,7 +17,6 @@ const PaymentInfo=({accPay})=>{
     }
         const submitHandler=(e)=>{
             e.preventDefault();
-            alert("form save succesfully");
             console.log(paymentData);
             window.localStorage.setItem("paymentData", JSON.stringify(paymentData)); 
             accPay();
@@ -34,8 +33,12 @@ return(<>
         contactDetails={getData.phoneNumber}
         fullName={getData.firstName + getData.lastName}
         address= {getData.add1 + getData.add2 + getData.city +" "+getData.state + getData.Zip }
+        onClick={accHandler}
         /> 
-    <ShippingDetails heading="Shipping Method" shippingData={localStorage.getItem("shippingData")}/>
+    <ShippingDetails 
+    heading="Shipping Method" 
+    shippingData={localStorage.getItem("shippingData")}  
+     onClick={acctwoHandler}/>
     <div className="payment_info">
            
         <h3>3. Payment Information</h3>

@@ -43,6 +43,9 @@
         border: 2px solid $gray-l2;
         color:  $gray-l2;
     }
+    button:disabled {
+        background: #dddddd;
+      }
  input{
     width: 88px;
     height: 40px;
@@ -61,6 +64,7 @@
 
  .singleCart_action{
     padding-top: 34px;
+    position: relative;
     button{
     background: none;
     color: $black;
@@ -78,6 +82,17 @@
         height: 17px;
         margin-right: 8px;
 
+    }
+    .desktophide_action{
+        display: none;
+        font-size: 32px;
+        color: $gray-l2;
+        position: absolute;
+        top: -10px;
+        left: 0;
+    }
+    .phonehide_action{
+        display: block;
     }
 }
 }

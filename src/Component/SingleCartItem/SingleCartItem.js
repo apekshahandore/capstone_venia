@@ -1,9 +1,14 @@
+import { useState } from "react";
 import {useDispatch} from "react-redux";
 import { cartActions } from "../../Redux/handleCartSlice";
 
 const  SingleCartItem =({img, title, price, id, item})=>{
+    const [name, setName] = useState();
     const dispatch = useDispatch();
-
+    const [view, setView]= useState(false);
+    const viewHandler=()=>{
+        setView(!view);
+    }
     const removeItemFromCartHandler = () => {
         dispatch(cartActions.removeItemFromCart(id));
       }
@@ -28,7 +33,7 @@ const  SingleCartItem =({img, title, price, id, item})=>{
                 </div>
 
 
-                <div className='aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--6 singlecart_middle'>
+                <div className='aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--5 singlecart_middle'>
                     <div className='aem-Grid aem-Grid--12'>
                         <div className='aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12'>
                             <strong>{productTitle}</strong>
@@ -42,7 +47,8 @@ const  SingleCartItem =({img, title, price, id, item})=>{
                                 <button 
                                  type="button"
                                  aria-label="Decrement value"
-                                 onClick={decreseCartQuntity}>-</button>
+                                 onClick={decreseCartQuntity}
+                                 disabled={count === 1 && !name}>-</button>
                                 <input type="text" value={count} />
                                 <button 
                                 type="button"
@@ -55,12 +61,22 @@ const  SingleCartItem =({img, title, price, id, item})=>{
                     </div>
                 </div>
    
-                <div className='aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--hide singleCart_action'>
-                <ul>
-                    <li><button><img src={require('../../Images/edit-2.svg').default} alt='like' />Edit Items</button></li>
-                    <li><button onClick={removeItemFromCartHandler}><img src={require('../../Images/trash-2.svg').default} alt='like' />Remove</button></li>
-                    <li><a href=' '><img src={require('../../Images/heart.svg').default} alt='like' /> Save for later</a></li>
-                </ul>
+                <div className='aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--1 singleCart_action'>
+                    <ul className="phonehide_action">
+                        <li><button><img src={require('../../Images/edit-1.svg').default} alt='like'/>Edit Items</button></li>
+                        <li><button onClick={removeItemFromCartHandler}><img src={require('../../Images/trash-2.svg').default} alt='like' />Remove</button></li>
+                        <li><a href=' '><img src={require('../../Images/heart.svg').default} alt='like' /> Save for later</a></li>
+                    </ul>
+                    <span className="desktophide_action" onClick={viewHandler}>
+                        ...
+                        {view && <div>
+                            <ul>
+                                <li><button><img src={require('../../Images/edit-1.svg').default} alt='like' /></button></li>
+                                <li><button onClick={removeItemFromCartHandler}><img src={require('../../Images/trash-2.svg').default} alt='like' /></button></li>
+                                <li><a href=' '><img src={require('../../Images/heart.svg').default} alt='like' /></a></li>
+                            </ul>
+                        </div>}
+                    </span>
                         
                 </div>
             </div>            

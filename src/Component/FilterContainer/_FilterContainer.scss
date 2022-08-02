@@ -26,40 +26,23 @@
                 font-family: $font-family-muli;
             }
             .checkbox{  
-                margin-bottom: 12px;
+                padding-top: 16px;
                 input{
+                    accent-color: #E26A2C;
+                    border: 2px solid #E26A2C;
                     width: 24px;
                     height: 24px;
-                    border: 2px solid $gray-m1;
                   
                 }
             label{
-                margin-left: 0;
+                margin-left: 16px;
                 font-family: $font-family-muli;
             }}
         .attribute{    
                 padding-bottom: 32px;
                 border-bottom: 2px solid $gray-l1;
             }
-        .color{
-                padding-bottom: 32px;
-                border-bottom: 2px solid $gray-l1;
-                    .filter_color{ 
-                        display: flex;
-                        flex-wrap: wrap;
-                    .color_box{
-                        min-width: 64px;
-                        height: 40px;
-                        border-radius: 6px;
-                        margin: 17px 3px 0 0;
-                        }
-                        .linear{
-                            background: transparent linear-gradient(180deg, #AF52FF 0%, #7950E8 16%, #4F5ADA 29%, #57CB76 43%, #EBC250 56%, #FF8810 69%, #E32F0F 83%, #BF1919 100%) 0% 0% no-repeat padding-box;
-                        }
-                  
-            }
-           
-    }
+    
             
          }
 }

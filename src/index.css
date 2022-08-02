@@ -92,3 +92,28 @@ code {
   }
 
 }
+.slick-dots {
+  bottom: 25px;
+  width: 100%;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+ 
+}
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.slick-dots li button:before {
+  opacity: .50;
+  color: white;
+}
+.slick-dots li.slick-active button:before {
+
+  color: white;
+}

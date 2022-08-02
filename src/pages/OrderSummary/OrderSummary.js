@@ -1,10 +1,9 @@
-import instagramIcon from "../../Images/instagram.svg";
-import facebookIcon from "../../Images/facebook.svg";
-import twitterIcon from "../../Images/twitter.svg";
+import instagramIcon from "../../Images/insta-2.svg";
+import facebookIcon from "../../Images/fb-2.svg";
+import twitterIcon from "../../Images/twitter -2.svg";
 import OrderItemContainer from "../../Component/ShippingFlow/OrderItemContainer";
 const OrderSummary=()=>{
-    let id= Math.random().toString(36).slice(2);
-
+    let orderno = Math.floor(Math.random() * 10000000)
     let newObject = window.localStorage.getItem("formData");
     console.log(JSON.parse(newObject));
     const getData = JSON.parse(newObject);
@@ -20,25 +19,37 @@ return(
     </div>
     <div className='aem-Grid aem-Grid--12'>
     <div className='aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 order_details'>
-        <h3>Order Number #{id}</h3>
+        <h3>Order Number #{orderno}</h3>
             <div className='aem-Grid aem-Grid--12'>
-                <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 order_details'>
-                    <h4>Shipping Information</h4>
+                <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--6 aem-GridColumn--phone--12 left_details'>
+                <div className="contact_details">
+                <h4>Shipping Information</h4>
                     <p>{getData.email}</p>
                     <p>{getData.phoneNumber}</p>
-
-                    <p>{getData.firstName}{getData.lastName}</p>    
+                </div>
+                <div className="address_details">
+                <p>{getData.firstName}{getData.lastName}</p>    
                     <p>{getData.add1}</p>    
                     <p>{getData.city}</p>   
-                    <p>United State</p>   
+                    <p>{getData.state}</p>   
                 </div>
-                <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 order_details'>
-                <h4>Shipping Method</h4>
-                <p>{localStorage.getItem("shippingData")}</p>
+                   
 
-                <h4 >Payment Information</h4>
-                <p>{getpaymentData.credit}</p>
-                <p>{getpaymentData.cvv}</p>
+                    
+                </div>
+
+                <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--6 aem-GridColumn--phone--12 right_details'>
+             
+                    <div className="shipMethod_details">
+                    <h4>Shipping Method</h4>
+                        <p>{localStorage.getItem("shippingData")}</p>
+                    </div>
+                    <div className="paymen_details">
+                    <h4>Payment Information</h4>
+                    <p>{getpaymentData.credit}Credit Card </p>
+                    <p>Visa ending in 4567{getpaymentData.cvv}</p>
+                    </div>
+                
                 </div>
             </div>
             
@@ -46,7 +57,7 @@ return(
         <p className="order_para">You will also receive an email with the details and we will let you know when your order has shipped.</p>
         <p className="order_para">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. For assistance call Support at 1-800-867-5309, M - F, 9am - 8pm EST.</p>
     </div>
-    <div className='aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 social_card'>
+    <div className='aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--12 aem-GridColumn--phone--hide social_card'>
         <div className="follow_link">
             <h2>Give us a follow to SAVE 20% on your next order.</h2>
         </div>

@@ -19,7 +19,7 @@ export const handleCartSlice = createSlice({
   
         if (existingIndex >= 0) {
            // If item already there
-          alert("alredy exist in cart");
+          // alert("alredy exist in cart");
           state.cartItems[existingIndex] = {
             ...state.items[existingIndex],
             cartQuantity: state.items[existingIndex].cartQuantity + 1,
@@ -29,8 +29,8 @@ export const handleCartSlice = createSlice({
           const product= action.payload;
           let tempProductItem = { ...product, cartQuantity: 1 };
           state.items.push(tempProductItem);
-          const addedItemInCart= tempProductItem.title?.split(' ').slice(0,3).join(' ');
-          alert(`${addedItemInCart} has been successfully added to your cart`);
+          // const addedItemInCart= tempProductItem.title?.split(' ').slice(0,3).join(' ');
+          // alert(`${addedItemInCart} has been successfully added to your cart`);
         
         }
        

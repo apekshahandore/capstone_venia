@@ -9,26 +9,32 @@
         position: relative;
      
     .homebanner_content{
-    position: absolute;
-    text-align: center;
-    
-    padding:  0 16px;
-    top: 30%;
+        position: absolute;
+        text-align: center;
+        padding: 0 16px 10rem 16px;
+        background: transparent linear-gradient(181deg,hsla(0,0%,95%,0),#f0f0f0) 0 0 no-repeat padding-box;
+        top: 30%;
     h1{
         font: normal normal 600 36px/45px Source Serif Pro;
         color: #1B252C;
+        max-width: 100%;
     }
     p{
         font: normal normal normal 16px/24px Muli;
         color: #1B252C;
+        max-width: 100%;
     }
+    .dots_action{
+        display: block;
+    }
+    
     }
        
         .homebanner_image{
           min-height: 100vh;
           float: none;
-        width: 100%;
-        background-size: 100% 100%;
+            width: 100%;
+            background-size: 120% 100%;
        
             figure{ 
                 img {
@@ -53,16 +59,16 @@
     }   
     
     .teaserbanner_one{
-        margin: 32px 0;
+        // margin: 32px 0;
         min-height: 60vh;
         flex-direction: column-reverse;
         justify-content: start;
-       
+       padding-bottom: 0;
         .teaserbanner_content{
             padding:0;
             text-align: center;
             h1{
-                padding-top: 16px;
+                padding: 16px 0 8px 0;
                 font: normal normal 600 36px/45px Source Serif Pro;
             }
             p{  font: normal normal normal 16px/24px Muli;
@@ -90,6 +96,7 @@
         min-height: 50vh;
         float: none;
         width: 100%;
+        background-size: 100% 145%;
       
        
     }
@@ -122,6 +129,7 @@
     }
 }
 header{
+   
     .logo{
         display: flex;
         .mobile_menu{
@@ -139,6 +147,10 @@ header{
             }
         }
     }
+    .mobilefilter_menu{
+        transition: all 0.3s;
+        display: block;
+        }
 }
 .main_banner{
 display: flex;
@@ -268,12 +280,18 @@ footer{
 .main_image{
   
     figure{
-      border: 1px solid $gray-l1;
+    //   border: 1px solid $gray-l1;
       img{
         height:410px;
         padding: 0 1em;
       }
     }
+    .single_image{
+        display: none;
+      }
+    .prodGallary_images{
+        display: block;
+      }
   }
 }
 .product_details{
@@ -339,16 +357,17 @@ h5{
 }
 }
 .cart{
+    padding-top: 0 !important;
     .cartLeft{
         padding-right:0 !important;
     }
    
     .cart_heading{
-        padding: 33px 0 40px 0;
+        padding: 27px 0 32px 0 !important;
         text-align: center;
         
         h1{
-            font: normal normal 600 36px/45px Source Serif Pro;
+            font: normal normal 600 36px/45px Source Serif Pro !important;
            max-width: 100%;
         }
         }
@@ -374,6 +393,15 @@ h5{
                  }
                 }
                 }
+            .singleCart_action{
+                .desktophide_action{
+                    display: block;
+                
+                }
+                .phonehide_action{
+                    display: none;
+                }
+            }
                 }
     
                   
@@ -402,11 +430,6 @@ h5{
 
 
 
-
-.mobilefilter_menu{
-display: block;
-
-}
 
 .mobileview_filterheader{
     display: block;
@@ -489,6 +512,18 @@ display: block;
         }
        
     }
+    
+}
+.order_summary{
+    h1{
+        padding-bottom: 10px;
+        font: normal normal 600 36px/45px Source Serif Pro;
+    }
+}
+.right_details{
+    .shipMethod_details{
+        padding-top: 32px;
+    }
 }
 }
 
@@ -506,6 +541,10 @@ display: block;
                 }
             }
         }
+      
+        .mobilefilter_menu{
+            display: block;
+            }
     }
     .card-container{
         .card{
@@ -628,9 +667,7 @@ display: block;
         padding: 24px 32px 40px 0;
         
 
-.paypal_btn  img{
-    margin-left: 75%;
-    }
+    
 }
 .filter_aside .filter_container .checkbox input {
     width: 18px;
@@ -640,9 +677,11 @@ display: block;
 .cartLeft{
     padding-right: 0;
 }
+
 }
 
 @media (min-width: 1024px) and (max-width: 1200px){
+ 
     .card-container{
         .card{
             padding:  0 21px 16px 0;
@@ -674,4 +713,10 @@ display: block;
     margin-left: 13rem;
     }
 }
+.teaserbanner_one{
+    .teaserbanner_content{
+        padding-left: 0;
+    }
 }
+}
+

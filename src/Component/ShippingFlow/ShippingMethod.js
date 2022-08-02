@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Button from "../Button/Button";
 import ShippingDetails from "./ShippingDetails";
-const ShippingMethod=({acctwoHandler})=>{
+const ShippingMethod=({acctwoHandler,accHandler})=>{
     const [shippingData, setshippingData]=useState(" ");
     
     let newObject = window.localStorage.getItem("formData");
@@ -21,7 +21,7 @@ const formHandler=(e)=>{
         contactDetails={getData.phoneNumber}
         fullName={getData.firstName + getData.lastName}
         address= {getData.add1 + getData.add2 + getData.city +" "+getData.state + getData.zip + getData.country}
-    
+        onClick={accHandler}
         />        
         <h3>2. Shipping Method</h3>
        <form>

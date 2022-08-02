@@ -37,10 +37,10 @@ const Checkout=()=> {
          
                 {isActive &&  <ShippingInformation accHandler={accHandler}/>}
                
-                {isShow &&  <ShippingMethod acctwoHandler={acctwoHandler}/>}
+                {isShow &&  <ShippingMethod acctwoHandler={acctwoHandler} accHandler={accHandler}/>}
               
-                {display &&  <PaymentInfo accPay={accPay}/>}
-                {orderSummary && <ReviewInfo />}
+                {display &&  <PaymentInfo accPay={accPay} accHandler={accHandler} acctwoHandler={acctwoHandler}/>}
+                {orderSummary && <ReviewInfo accPay={accPay} accHandler={accHandler} acctwoHandler={acctwoHandler}/>}
            
             
             </div>
