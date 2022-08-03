@@ -13,12 +13,14 @@ return(
         <h6>Categories</h6>
         {
             filterCategories.map((val)=>{
+              
                 return(<div className="checkbox"> 
                             <input type="checkbox"
                             id={val.id}
                             name={val.name}
                             onChange={()=>{ setIsChosen(!isChosen);
                             filterProduct(`${val.name}`);}}
+                           
                             /> 
                             <label htmlFor={val.id} className="checkbox">{val.label}</label>
                         </div>);
@@ -36,9 +38,11 @@ return(
         <div className="checkbox"> 
             <input type="checkbox" 
             id="chk2-label"  
-            name="electronics" 
+            name="electronics"
             onChange={()=>{ setIsChosen(!isChosen);
-            filterProduct("electronics");}}/> 
+            filterProduct("electronics");}}
+
+            /> 
             <label htmlFor="chk2-label" className="checkbox">Electronics</label>
         </div>
         <div className="checkbox"> 
@@ -55,14 +59,16 @@ return(
             id="chk4-label"  
             name="women's clothing" 
             onChange={()=>{ setIsChosen(!isChosen);
-            filterProduct("women's clothing");}}/> 
+            filterProduct("women's clothing");}}
+
+            /> 
             <label htmlFor="chk4-label" className="checkbox">Women's Clothing</label>
-        </div> */}
+        </div>
         <div className="checkbox"> 
             <a href=" ">Show More</a>
-        </div>
+        </div> */}
         
-        {/* <a href=" ">Show More</a> */}
+        <a href=" ">Show More</a>
     </div>
   
 </div>

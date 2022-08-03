@@ -9,6 +9,15 @@ const ProductListing=()=>{
     const [data, setData]= useState([]);
     const [filter, setFilter]= useState(data);
     const [loading, setLoading]= useState(false);
+    const [categories, setCategories] = useState(
+        {
+            electronics: false,
+            jewelery: false,
+            "men's clothing":false,
+            "women's clothing":false,
+
+        }
+    )
     useEffect(()=>{
         const getProducts =async()=>{
             setLoading(true);
@@ -21,7 +30,12 @@ const ProductListing=()=>{
         }
             getProducts();
     },[]);
-  
+
+    const  handleChange = (e) => {
+        const { name } = e.target;
+        setCategories(()=>{return{...categories,[name]: !categories[name]}}
+        )
+      };
     // addedpart end from productContainer
 
     const totalProducts= filter.length;
@@ -33,11 +47,16 @@ const ProductListing=()=>{
         let sortedData= data?.slice().sort((a, b) => b.price - a.price);
         setFilter(sortedData);
        }
-        const filterProduct =(item)=>{
-            const productList = data.filter((val)=>val.category === item);
-            setFilter(productList);
-        }
-   
+        // const filterProduct =(item)=>{
+        //     const productList = data.filter((val)=>val.category === item);
+        //     setFilter(productList);
+        // }
+        const checkedProducts = Object.entries(categories)
+        .filter((category) => category[1])
+        .map((category) => category[0]);
+      const filteredProducts = data.filter(({ category }) =>
+        checkedProducts.includes(category)
+      );
         const sortProduct=(event)=>{
         
             if(event.target.value === "lowtohigh"){
@@ -58,11 +77,66 @@ const ProductListing=()=>{
         <ProdutListHeader totalProducts={totalProducts} sortProduct={sortProduct} lowToHigh={sortProductLTH} highToLow={sortProductHTL}/>
       
         <aside className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--tablet--3 aem-GridColumn--phone--hide">
-         <FilterContainer filterProduct={filterProduct} />
+         {/* <FilterContainer filterProduct={filterProduct}/> */}
+
+
+            <div className="filter_aside">
+                    <div className="filter_container">
+                        <div className="attribute">  
+                        <h5>Filters</h5>
+                        </div>
+                        <div className="attribute">  
+                            <h6>Categories</h6>
+                        
+                            <div className="checkbox"> 
+                                <input type="checkbox"
+                                id="chk1-label"
+                                name="jewelery"
+                                onChange={handleChange}
+                                checked={categories.jewelery}
+                                /> 
+                                <label htmlFor="chk1-label" className="checkbox">Jewellery</label>
+                            </div>
+                            <div className="checkbox"> 
+                                <input type="checkbox" 
+                                id="chk2-label"  
+                                name="electronics" 
+                                onChange={handleChange}
+                                checked={categories.electronics}
+                                /> 
+                                <label htmlFor="chk2-label" className="checkbox">Electronics</label>
+                            </div>
+                            <div className="checkbox"> 
+                                <input type="checkbox" 
+                                id="chk3-label"  
+                                name="men's clothing" 
+                                onChange={handleChange}
+                                checked={categories["men's clothing"]}
+                                /> 
+                                <label htmlFor="chk3-label" className="checkbox">Men's Clothing</label>
+                            </div>
+                            <div className="checkbox"> 
+                                <input type="checkbox" 
+                                id="chk4-label"  
+                                name="women's clothing"   
+                                onChange={handleChange}
+                                checked={categories["women's clothing"]}
+                              
+                                /> 
+                                <label htmlFor="chk4-label" className="checkbox">Women's Clothing</label>
+                            </div>
+                            <div className="checkbox"> 
+                                <a href=" ">Show More</a>
+                            </div>
+                    
+                        </div>
+            
+                    </div>
+            </div>
         </aside>
         
         <main className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--tablet--9 aem-GridColumn--phone--12">
-        <ProductContainer filter={filter} loading={loading} />
+        <ProductContainer filter={filteredProducts.length === 0 ? filter : filteredProducts} loading={loading} />
         </main>
        
        
