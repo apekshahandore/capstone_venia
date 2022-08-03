@@ -1,7 +1,10 @@
 @use  "../../../Style/Common/mixin";
 @use  "../../../Style/Common/variables";
 @media (min-width: 0px) and (max-width: 767px) {
-
+    .mobilefilter_menu{
+        transition: all 0.3s;
+        display: block;
+        }
     .homebanner{
         min-height: 100vh;
         flex-direction: column-reverse;
@@ -136,7 +139,7 @@ header{
             display: block;
           }
         .navbar-brand{
-        padding-left: 65px;
+             padding-left: 65px;
          }
     }
  
@@ -147,10 +150,11 @@ header{
             }
         }
     }
-    .mobilefilter_menu{
+    .mobileSidebar_menu{
         transition: all 0.3s;
         display: block;
-        }
+    }
+  
 }
 .main_banner{
 display: flex;
@@ -533,6 +537,10 @@ h5{
 
 
 @media (min-width: 768px) and (max-width: 1023px){
+    .mobilefilter_menu{
+        display: block;
+        }
+
     header{
         .right_nav{
             ul{
@@ -542,7 +550,7 @@ h5{
             }
         }
       
-        .mobilefilter_menu{
+        .mobileSidebar_menu{
             display: block;
             }
     }

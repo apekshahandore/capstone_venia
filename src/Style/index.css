@@ -6155,6 +6155,11 @@ footer .footer-bottom .left-nav li a {
 @use "../../../Style/Common/mixin";
 @use "../../../Style/Common/variables";
 @media (min-width: 0px) and (max-width: 767px) {
+  .mobilefilter_menu {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    display: block;
+  }
   .homebanner {
     min-height: 100vh;
     -webkit-box-orient: vertical;
@@ -6169,9 +6174,9 @@ footer .footer-bottom .left-nav li a {
   .homebanner .homebanner_content {
     position: absolute;
     text-align: center;
-    padding: 0 16px 10rem 16px;
+    padding: 0 16px 7rem 16px;
     background: transparent linear-gradient(181deg, rgba(242, 242, 242, 0), #f0f0f0) 0 0 no-repeat padding-box;
-    top: 30%;
+    bottom: 0;
   }
   .homebanner .homebanner_content h1 {
     font: normal normal 600 36px/45px Source Serif Pro;
@@ -6297,7 +6302,7 @@ footer .footer-bottom .left-nav li a {
   header .right_nav ul .texthide {
     display: none !important;
   }
-  header .mobilefilter_menu {
+  header .mobileSidebar_menu {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     display: block;
@@ -6609,10 +6614,13 @@ footer .footer-bottom .left-nav li a {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+  .mobilefilter_menu {
+    display: block;
+  }
   header .right_nav ul .texthide {
     display: none !important;
   }
-  header .mobilefilter_menu {
+  header .mobileSidebar_menu {
     display: block;
   }
   .card-container .card {
@@ -7519,7 +7527,9 @@ footer .footer-bottom .left-nav li a {
   text-align: center;
 }
 
-.mobilefilter_menu {
+.mobileSidebar_menu {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   position: fixed;
   top: 0;
   right: 0;
@@ -7529,7 +7539,7 @@ footer .footer-bottom .left-nav li a {
   -webkit-box-shadow: 0px 8px 16px #00000026;
           box-shadow: 0px 8px 16px #00000026;
   z-index: 100;
-  min-height: 100vh;
+  min-height: 120vh;
   overflow-y: auto;
   display: none;
   -webkit-animation: moveToRight 1s ease-in-out;
@@ -7558,6 +7568,84 @@ footer .footer-bottom .left-nav li a {
   }
 }
 
+.mobileSidebar_menu nav {
+  background-color: #E5E5E7;
+  padding: 11px 24px 13px 24px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.mobileSidebar_menu nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mobileSidebar_menu nav ul li {
+  font: normal normal 600 16px/24px Muli;
+  color: #1D1D1B;
+  letter-spacing: 0.32px;
+}
+
+.mobileSidebar_menu .navlink {
+  padding: 16px 0 16px 24px;
+  border-bottom: 2px solid #E5E5E7;
+  font: normal normal normal 16px/24px Muli;
+  color: #172026;
+}
+
+.mobileSidebar_menu .Mobile_contactfooter {
+  margin-top: 18rem;
+  -webkit-box-shadow: 0px 0px 35px #0000000D;
+          box-shadow: 0px 0px 35px #0000000D;
+  padding: 16px 24px 16px 24px;
+}
+
+.mobileSidebar_menu .Mobile_contactfooter ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mobileSidebar_menu .Mobile_contactfooter ul li {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font: normal normal normal 16px/24px Muli;
+  color: #172026;
+}
+
+.mobilefilter_menu {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+  left: 10%;
+  right: 0;
+  background-color: white;
+  height: 200vh;
+  -webkit-animation: moveToRight 1s ease-in-out;
+          animation: moveToRight 1s ease-in-out;
+}
+
+@keyframes moveToRight {
+  0% {
+    -webkit-transform: translateX(500px);
+            transform: translateX(500px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
 .mobilefilter_menu h6 {
   font: normal normal 600 16px/24px Muli;
   color: #181C24;
@@ -7568,7 +7656,6 @@ footer .footer-bottom .left-nav li a {
   padding: 11px 24px 13px 24px;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
 }
 
 .mobilefilter_menu nav ul {

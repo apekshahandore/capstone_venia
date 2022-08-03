@@ -1,6 +1,6 @@
 
-.mobilefilter_menu{
-    // backdrop-filter: blur(5px);
+.mobileSidebar_menu{
+    backdrop-filter: blur(5px);
     position: fixed;
     top: 0;
     right: 0;
@@ -9,7 +9,7 @@
     background-color: white;
     box-shadow: 0px 8px 16px #00000026;
     z-index: 100;
-    min-height: 100vh;
+    min-height: 120vh;
     overflow-y: auto;
     display: none;
     animation: moveToRight 1s ease-in-out;
@@ -23,10 +23,7 @@
     }
     
 
-    h6{
-        font: normal normal 600 16px/24px Muli;
-        color: #181C24;
-    }
+
     nav{
     background-color: $gray-l1;
     padding: 11px 24px 13px 24px;
@@ -43,38 +40,33 @@
                 }
             }
         }
-
-
-  
-    
-    .attribute{    
-        padding: 16px 0 32px 24px;
+    .navlink{
+        padding:16px 0 16px 24px;
         border-bottom: 2px solid $gray-l1;
-        a{
-            font-size: $font-size-14;
-            color: $gray-d2;
-            line-height: 24px;
-            text-decoration: underline;
-            font-family: $font-family-muli;
-        }
-        .checkbox{  
-            padding-top: 16px;
-            input{
-                accent-color: #E26A2C;
-                border: 2px solid #E26A2C;
-                width: 24px;
-                height: 24px;
-              
-            }
-        label{
-            margin-left: 16px;
-            font-family: $font-family-muli;
-        }}
+        font: normal normal normal 16px/24px Muli;
+        color: #172026;
     }
-.action{
-    display: flex;
-    justify-content: center;
-    padding-top: 32px;
-}
-  
+    .Mobile_contactfooter {
+      margin-top: 18rem;
+        box-shadow: 0px 0px 35px #0000000D;
+        padding:16px 24px 16px 24px;
+       
+        
+     
+            ul{
+                display: flex;
+                justify-content: space-between;
+              
+               li{
+                justify-content: space-between ;
+                font: normal normal normal 16px/24px Muli;
+                color: #172026;
+               }
+            
+        }
+       
+     
+            
+        
+    }
 }

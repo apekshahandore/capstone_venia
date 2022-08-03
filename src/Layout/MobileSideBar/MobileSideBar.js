@@ -6,46 +6,37 @@ const MobileSideBar=({onClose})=>{
     onClose();
    }
     return(<>
-             <aside className="mobilefilter_menu container">
+             <aside className="mobileSidebar_menu container">
             <nav>
                 <ul>
-                    <li>Filters</li>
+                    <li>Shop Categories</li>
                     <li onClick={closeSideBar}><img src={closeIcon} alt="close_icon"/></li>
                 </ul>
    
                
             </nav>
-                <div className="attribute">
-                    <a href=" ">Clear all</a>
+                <div className="navlink">
+                   <span>Women</span>
+                </div>
+                <div className="navlink">
+                   <span>Men</span>
+                </div>
+                <div className="navlink">
+                   <span>SmartGear</span>
+                </div>
+                <div className="navlink">
+                   <span>Accessories</span>
                 </div>
          
-    <div className="filter_container">
-   
-    <div className="attribute border_none">  
-        <h6>Categories</h6>
-        {
-            filterCategories.map((val)=>{
-                return(<div className="checkbox"> 
-                            <input type="checkbox"
-                            id={val.id}
-                            name={val.name}
-                          
-                            /> 
-                            <label htmlFor={val.id} className="checkbox">{val.label}</label>
-                        </div>);
-            })
-        }
-        <div className="checkbox"> 
-            <a href=" ">Show More</a>
-        </div>
-      
+    <div className="Mobile_contactfooter">
+    <div className="Mobile_contact">
+       <ul>
+        <li>Account</li>
+        <li>Sign In</li>
+       </ul>
     </div>
-    <div className="action">
-        <Button aria-label="see more results" className="btn_lab" text="SEE 17 RESULTS"/>
+    </div>
 
-        </div>
-
-</div>
              
             </aside>
     </>)
