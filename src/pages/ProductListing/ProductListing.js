@@ -78,8 +78,6 @@ const ProductListing=()=>{
       
         <aside className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--tablet--3 aem-GridColumn--phone--hide">
          {/* <FilterContainer filterProduct={filterProduct}/> */}
-
-
             <div className="filter_aside">
                     <div className="filter_container">
                         <div className="attribute">  
@@ -87,16 +85,6 @@ const ProductListing=()=>{
                         </div>
                         <div className="attribute">  
                             <h6>Categories</h6>
-                        
-                            <div className="checkbox"> 
-                                <input type="checkbox"
-                                id="chk1-label"
-                                name="jewelery"
-                                onChange={handleChange}
-                                checked={categories.jewelery}
-                                /> 
-                                <label htmlFor="chk1-label" className="checkbox">Jewellery</label>
-                            </div>
                             <div className="checkbox"> 
                                 <input type="checkbox" 
                                 id="chk2-label"  
@@ -106,6 +94,16 @@ const ProductListing=()=>{
                                 /> 
                                 <label htmlFor="chk2-label" className="checkbox">Electronics</label>
                             </div>
+                            <div className="checkbox"> 
+                                <input type="checkbox"
+                                id="chk1-label"
+                                name="jewelery"
+                                onChange={handleChange}
+                                checked={categories.jewelery}
+                                /> 
+                                <label htmlFor="chk1-label" className="checkbox">Jewelery</label>
+                            </div>
+                            
                             <div className="checkbox"> 
                                 <input type="checkbox" 
                                 id="chk3-label"  
@@ -141,7 +139,7 @@ const ProductListing=()=>{
        
        
     </section>
-    {/* <MobileSideBar/> */}
+   
     </>)
 
 }

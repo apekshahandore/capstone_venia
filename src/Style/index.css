@@ -5583,76 +5583,186 @@ footer .footer-bottom .left-nav li a {
   float: none;
 }
 
-.teaserbanner_two {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-bottom: 128px;
+.teaserbanner_footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-}
-
-.teaserbanner_two .teaserbanner-content {
-  -ms-flex-preferred-size: 38%;
-      flex-basis: 38%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   color: #FFFFFF;
-  background-color: #1B252C;
+  align-items: center;
 }
 
-.teaserbanner_two .teaserbanner-content .teasertwo_content {
-  padding: 5em 2.9em;
+.teaserbanner_secone {
+  width: 62%;
 }
 
-.teaserbanner_two .teaserbanner-content .teasertwo_content h2 {
-  font: normal normal 600 40px/62px Source Serif Pro;
-  max-width: 100%;
-}
-
-.teaserbanner_two .teaserbanner-content .teasertwo_content p {
-  font: normal normal 600 20px/25px Muli;
-  padding: 16px 0 32px 0;
-}
-
-.teaserbanner_two .teaserbanner-content .teasertwo_content .shop_devices {
-  border: 2px solid #FFFFFF;
-  background-color: transparent;
-  padding: 11px 20px;
-  border-radius: 10px;
-}
-
-.teaserbanner_two .teaserbanner-imgae {
-  -ms-flex-preferred-size: 62%;
-      flex-basis: 62%;
-  padding: 17px 0;
-}
-
-.teaserbanner_two .teaserbanner-imgae img {
-  min-height: 100%;
+.teaserbanner_secone > img {
+  width: 100%;
+  height: 350px;
   -o-object-fit: fill;
      object-fit: fill;
 }
 
-.teaserbanner_two .teaserbanner-imgae .location_box {
-  width: 102px;
+.teaserbanner_sectwo {
   text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1B252C;
+  width: 38%;
+  height: 380px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.teaserbanner_sectwo > h2 {
+  font: normal normal 600 40px/62px Source Serif Pro;
+  max-width: 100%;
+  margin-bottom: 16px;
+}
+
+.teaserbanner_sectwo > h2 .mobile_hide {
+  display: none;
+}
+
+.teaserbanner_sectwo > h2 span {
+  display: block;
+}
+
+.teaserbanner_sectwo > span {
+  font: normal normal 600 20px/25px Muli;
+  margin-bottom: 16px;
+}
+
+.teaserbanner_sectwo > .shop_devices {
+  width: 50%;
+  border: 2px solid #FFFFFF;
+  background-color: transparent;
+  padding: 11px 10px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.teaserbanner_sectwo > img {
   position: absolute;
-  z-index: 9;
-  margin-top: -6%;
-  margin-left: 46.50%;
+  width: 56px;
+  height: 56px;
+  bottom: 64.5px;
+  left: -27px;
 }
 
-.teaserbanner_two .teaserbanner-imgae .location_box img {
-  width: 33px;
-  height: 41px;
-  padding-bottom: 8px;
+.teaserbanner_sectwo > hr {
+  border: 4px solid #E26A2C;
+  width: 102px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  position: absolute;
+  bottom: 40px;
+  left: -51px;
 }
 
-.teaserbanner_two .teaserbanner-imgae .location_box .border {
-  background-color: #E26A2C;
-  width: 100%;
-  height: 8px;
+@media screen and (max-width: 328px) {
+  .teaserbanner_sectwo {
+    width: 100%;
+    margin: 0 16px;
+    height: 300px;
+  }
+  .teaserbanner_secone > img {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    top: 40px;
+  }
+  .teaserbanner_sectwo > img {
+    left: 82.5px;
+    top: -22px;
+    padding-bottom: 5px;
+    border-bottom: 8px solid #1363DF;
+  }
+  .teaserbanner_sectwo > hr {
+    display: none;
+  }
+  .teaserbanner_sectwo > h2 {
+    text-align: center !important;
+  }
+  .teaserbanner_sectwo > h2 span {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 328px) and (max-width: 768px) {
+  .teaserbanner_sectwo {
+    width: 90%;
+    margin: 0 16px;
+    height: 300px;
+  }
+  .teaserbanner_secone {
+    width: 100%;
+  }
+  .teaserbanner_secone > img {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    top: 40px;
+  }
+  .teaserbanner_sectwo > img {
+    left: 82.5px;
+    top: -22px;
+    padding-bottom: 10px;
+    border-bottom: 8px solid #E26A2C;
+  }
+  .teaserbanner_sectwo > hr {
+    display: none;
+  }
+  .teaserbanner_sectwo > h2 span {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .teaserbanner_sectwo {
+    width: 90%;
+    margin: 0 16px;
+  }
+  .teaserbanner_secone {
+    width: 100%;
+  }
+  .teaserbanner_secone > img {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    top: 40px;
+  }
+  .teaserbanner_sectwo > hr {
+    display: none;
+  }
+  .teaserbanner_sectwo > img {
+    left: 82.5px;
+    top: -22px;
+    padding-bottom: 10px;
+    border-bottom: 8px solid #E26A2C;
+  }
+  .teaserbanner_sectwo > h2 span {
+    display: block;
+  }
 }
 
 .card {
@@ -6260,33 +6370,6 @@ footer .footer-bottom .left-nav li a {
     float: none;
     width: 100%;
     background-size: 100% 145%;
-  }
-  .teaserbanner_two {
-    text-align: center;
-    padding: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .teaserbanner_two .teaserbanner-content {
-    height: 80% !important;
-    margin: -15% 0 0 1%;
-    width: 85% !important;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font: normal normal 600 36px/45px Source Serif Pro;
-  }
-  .teaserbanner_two .teaserbanner-content .teasertwo_content {
-    padding: 0.7em;
-  }
-  .teaserbanner_two .teaserbanner-content .hide {
-    display: none;
-  }
-  .teaserbanner_two .teaserbanner-imgae .location_box {
-    margin-left: 10%;
-    margin-top: -15%;
   }
   header .logo {
     display: -webkit-box;
@@ -7459,6 +7542,13 @@ footer .footer-bottom .left-nav li a {
   border-bottom: 1px solid grey;
 }
 
+.payment_info .help_circle img {
+  width: 24px;
+  height: 24px;
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
 .order_container {
   margin-bottom: 32px;
   padding: 24px;
@@ -7528,22 +7618,21 @@ footer .footer-bottom .left-nav li a {
 }
 
 .mobileSidebar_menu {
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
   position: fixed;
   top: 0;
   right: 0;
-  width: 90%;
+  left: 0;
+  width: 100%;
   padding: 0;
   background-color: white;
   -webkit-box-shadow: 0px 8px 16px #00000026;
           box-shadow: 0px 8px 16px #00000026;
   z-index: 100;
-  min-height: 120vh;
+  height: 100%;
   overflow-y: auto;
   display: none;
-  -webkit-animation: moveToRight 1s ease-in-out;
-          animation: moveToRight 1s ease-in-out;
+  -webkit-animation: moveToRight 0.5s ease-in-out;
+          animation: moveToRight 0.5s ease-in-out;
 }
 
 @-webkit-keyframes moveToRight {
@@ -7573,6 +7662,8 @@ footer .footer-bottom .left-nav li a {
   padding: 11px 24px 13px 24px;
   position: -webkit-sticky;
   position: sticky;
+  -webkit-box-shadow: 35px 35px 35px #0000000D;
+          box-shadow: 35px 35px 35px #0000000D;
   top: 0;
 }
 
@@ -7598,11 +7689,20 @@ footer .footer-bottom .left-nav li a {
   color: #172026;
 }
 
+.mobileSidebar_menu .navlink:hover {
+  background-color: #ddd5d5;
+  color: white;
+  -webkit-box-shadow: 35px 35px 35px #0000000D;
+          box-shadow: 35px 35px 35px #0000000D;
+}
+
 .mobileSidebar_menu .Mobile_contactfooter {
-  margin-top: 18rem;
-  -webkit-box-shadow: 0px 0px 35px #0000000D;
-          box-shadow: 0px 0px 35px #0000000D;
+  margin-top: 20rem;
+  -webkit-box-shadow: 35px 35px 35px #0000000D;
+          box-shadow: 35px 35px 35px #0000000D;
   padding: 16px 24px 16px 24px;
+  border-top: 2px solid #E5E5E7;
+  border-bottom: 2px solid #E5E5E7;
 }
 
 .mobileSidebar_menu .Mobile_contactfooter ul {
@@ -7631,8 +7731,8 @@ footer .footer-bottom .left-nav li a {
   right: 0;
   background-color: white;
   height: 200vh;
-  -webkit-animation: moveToRight 1s ease-in-out;
-          animation: moveToRight 1s ease-in-out;
+  -webkit-animation: moveToRight .5s ease-in-out;
+          animation: moveToRight .5s ease-in-out;
 }
 
 @keyframes moveToRight {

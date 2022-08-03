@@ -10,18 +10,18 @@ import menImg from "./Images/prod2.PNG";
 import jwelleryImg from "./Images/prod3.PNG";
 import electronicsImg from "./Images/prod4.PNG";
 export const navMainMenu=[{
-    id:"NMM0", list:"Home",
+    id:"NMM0", list:"Home", link:"/"
 },{
-    id:"NMM1", list:"Women",
+    id:"NMM1", list:"Women", link:"/productListing",
 },
 {
-    id:"NMM2", list:"Men",
+    id:"NMM2", list:"Men", link:"/productListing",
 },
 {
-    id:"NMM3", list:"Smart Gear",
+    id:"NMM3", list:"Electronic", link:"/productListing",
 },
 {
-    id:"NMM4", list:"Assessories",
+    id:"NMM4", list:"Jewellery", link:"/productListing",
 },
 ]
 export const category=[{

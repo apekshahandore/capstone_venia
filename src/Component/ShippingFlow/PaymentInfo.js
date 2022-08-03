@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import ShippingDetails from "./ShippingDetails";
 import Button from "../Button/Button";
 import InputBox from "../ContactInfo/InputBox";
-
+import helpCircle from "../../Images/help-circle.svg";
 const PaymentInfo=({accPay,acctwoHandler,accHandler})=>{
     const [paymentData, setPaymentData]=useState({
         cardName:" ",
@@ -76,7 +76,7 @@ return(<>
             </div>
         </div>
         <div className="aem-Grid aem-Grid--12">
-            <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--8 date_inputBox ">
+            <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--7 date_inputBox ">
             <InputBox type="date" label="Expiration Date"/>
             </div>
             <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--3 cvv_inputBox">
@@ -90,7 +90,14 @@ return(<>
             />
           
             </div>
-           
+            <div className="aem-GridColumn aem-GridColumn--default--1 aem-GridColumn--phone--2 help_circle">
+        
+                  <figure>
+                    <img src={helpCircle} alt="help-circle"/>
+                </figure>
+         
+              
+           </div>
             
         </div>
         <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--6 checkbox_control">

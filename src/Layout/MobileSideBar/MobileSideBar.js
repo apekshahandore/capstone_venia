@@ -35,6 +35,7 @@ const MobileSideBar=({onClose})=>{
         <li>Sign In</li>
        </ul>
     </div>
+  
     </div>
 
              

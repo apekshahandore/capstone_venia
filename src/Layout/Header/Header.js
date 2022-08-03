@@ -26,7 +26,7 @@ return(
         
             <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--tablet--2 aem-GridColumn--phone--9 logo">
               <Link to="#" className="mobile_menu" onClick={()=>{setClicked(true)}}>
-                <img style={{width:"18px" ,height:"12px"}} src={require('../../Images/align-justify.svg').default} alt='search'/>
+                <img style={{width:"22px" ,height:"18px"}} src={require('../../Images/align-justify.svg').default} alt='search'/>
               </Link>
              
               <NavLink className="navbar-brand" to="/">
@@ -38,7 +38,7 @@ return(
               <ul>
                {navMainMenu.map((val)=>{
                  return(
-                <li key={val.id}><NavLink to=''><span>{val.list}</span></NavLink></li>)
+                <li key={val.id}><NavLink to={val.link}><span>{val.list}</span></NavLink></li>)
                   })}   
               </ul>
             </div>

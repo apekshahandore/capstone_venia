@@ -1,64 +1,153 @@
 
-
-.teaserbanner_two{
-    align-items: center;
-    padding-bottom: 128px;
+.teaserbanner_footer{
     display: flex;
-    position: relative;
-    .teaserbanner-content{
-    flex-basis: 38%;
-        color:$white;
-        background-color: $black;
-        // padding: 42px 0 55px 25px;
-       
-        .teasertwo_content{
-            padding:5em 2.9em;
-            // padding: 3.5em 4em;    
-            h2{
-                font: normal normal 600 40px/62px Source Serif Pro;
-                max-width: 100%;
-            }
-            p{
-                font: normal normal 600 20px/25px Muli;
-                padding: 16px 0 32px 0;
-                
-            }
-            .shop_devices{
-                            border: 2px solid $white;
-                            background-color: transparent;
-                            padding: 11px 20px;
-                            border-radius: 10px;
-                           
-                        }
-        }
-    }
-    .teaserbanner-imgae{
-        flex-basis: 62%;
-        padding: 17px 0;
-      
-        img{
-            min-height: 100%;
-            object-fit: fill;
-        }
-.location_box{
-    width: 102px;
-    text-align: center;
-    position: absolute;
-    z-index: 9;
-    margin-top: -6%;
-    margin-left: 46.50%;
-    img{
-    width: 33px;
-    height: 41px;
-    padding-bottom: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color:$white;
+    align-items: center;
 }
- .border{
-    
-    background-color: $primary-brand;
-    width: 100%;
-    height: 8px;
- }
+.teaserbanner_secone{
+    width: 62%;
+}
+.teaserbanner_secone > img{
+ width: 100%;
+ height: 350px;
+ object-fit: fill;
+}
+.teaserbanner_sectwo{
+    text-align: center;
+    align-items: center;
+    background-color: #1B252C;
+    width: 38%;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.teaserbanner_sectwo > h2{
+    font: normal normal 600 40px/62px Source Serif Pro;
+    max-width: 100%;
+    margin-bottom: 16px;
+    .mobile_hide{
+        display: none;
+    }
+}
+.teaserbanner_sectwo > h2 span{
+    display: block;
+}
+.teaserbanner_sectwo > span{
+    font: normal normal 600 20px/25px Muli;
+    margin-bottom: 16px;
+}
+.teaserbanner_sectwo> .shop_devices{
+                                width: 50%;
+                                border: 2px solid $white;
+                                background-color: transparent;
+                                padding: 11px 10px;
+                                border-radius: 10px;
+                                margin-bottom: 16px;
+                           }
+.teaserbanner_sectwo > img{
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    bottom: 64.5px;
+    left: -27px;
+}
+.teaserbanner_sectwo > hr{
+    @include divider(0px, 0px, 0px, 0px);
+    position: absolute;
+    bottom: 40px;
+    left: -51px;
 }
 
+@media screen and (max-width:328px) {
+    .teaserbanner_sectwo {
+        width: 100%;
+        margin: 0 16px;
+        height: 300px;
+    } 
+    .teaserbanner_secone > img {
+        width: 100%;
+        height: 300px;
+        position: relative;
+        top: 40px;
+    }
+    .teaserbanner_sectwo > img {
+        left: 82.5px;
+        top: -22px;
+        padding-bottom: 5px;
+        border-bottom: 8px solid #1363DF;
+    }
+    .teaserbanner_sectwo > hr {
+        display: none;
+     }
+     .teaserbanner_sectwo > h2 {
+      
+        text-align: center !important;
+     }
+     .teaserbanner_sectwo > h2 span{
+        display: block;
+    }
+    
+    
+}
+@media screen and (min-width:328px) and (max-width:768px) {
+    .teaserbanner_sectwo {
+        width: 90%;
+        margin: 0 16px;
+        height: 300px;
+    } 
+    .teaserbanner_secone{
+        width: 100%;
+    }
+    .teaserbanner_secone > img {
+        width: 100%;
+        height: 300px;
+        position: relative;
+        top: 40px;
+    }
+    .teaserbanner_sectwo > img {
+        left: 82.5px;
+        top: -22px;
+        padding-bottom: 10px;
+        border-bottom: 8px solid $primary-brand;
+    }
+    .teaserbanner_sectwo > hr {
+       display: none;
+    }
+    .teaserbanner_sectwo > h2 span{
+        display: block;
     }
 }
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .teaserbanner_sectwo {
+        width: 90%;
+        margin: 0 16px;
+    } 
+    .teaserbanner_secone{
+        width: 100%;
+    }
+    .teaserbanner_secone > img {
+        width: 100%;
+        height: 250px;
+        position: relative;
+        top: 40px;
+    }
+    .teaserbanner_sectwo > hr {
+        display: none;
+     }
+     .teaserbanner_sectwo > img {
+        left: 82.5px;
+        top: -22px;
+        padding-bottom: 10px;
+        border-bottom: 8px solid $primary-brand;
+    }
+    .teaserbanner_sectwo > h2 span{
+        display: block;
+    }
+}
+
