@@ -59,9 +59,14 @@
     }
   
     .react-slider__imgZoom {
-         opacity: 0; 
-         z-index: 0; 
+         opacity: 0 !important; 
+         z-index: 0 !important; 
+         display: none !important;
     }
+    .react-slider__lens {
+      display: none !important;
+    }
+
 }
 
 .category_left{
