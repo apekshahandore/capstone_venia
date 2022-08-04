@@ -9,7 +9,9 @@ import Cart from "./pages/Cart/Cart";
 import "./Style/index.scss";
 import Checkout  from './pages/Checkout/Checkout';
 import OrderSummary from './pages/OrderSummary/OrderSummary';
+
 function App() {
+ 
   return (
     <>
     <Layout>
@@ -26,6 +28,8 @@ function App() {
     <Route exact path="/order_confirmation" element={<OrderSummary />} /> 
     </Routes>   
     </Layout>
+
+ 
   </>
   );
 }

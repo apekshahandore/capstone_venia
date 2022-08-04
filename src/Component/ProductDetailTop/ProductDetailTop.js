@@ -6,13 +6,13 @@ import Rating from "../Rating/Rating";
 import ProdDesc from "./ProdDesc"
 import Quantity from "../Quantity/Quantity";
 import Carousel from "../Carousel/Carousel";
-
+import SliderImage from "react-zoom-slider";
 const ProductDetailsTop=({title,price,rating,description,image, product})=>{
 const dispatch = useDispatch();
 let [num, setNum] = useState(1);
 
     const addProduct=(product,num)=>{ 
-        // dispatch(cartActions.addProdToCart({...product, quntity:1}));
+     
         dispatch(cartActions.addProdToCart(product, num));
     }
     let productTitle= title?.split(' ').slice(0,3).join(' ');
@@ -32,8 +32,7 @@ let [num, setNum] = useState(1);
     let handleChange = (e) => {
         setNum(e.target.value);
     }
-    console.log(product.category);
- 
+    const data = [{image},{image},{image},{image},{image}];
     return(<>
     {/* productdetail page left part */}
         <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--6 aem-GridColumn--phone--12 product_image">
@@ -42,36 +41,18 @@ let [num, setNum] = useState(1);
                 <div className="category_left">
                     <a href=" ">Clothing</a> / <a href=" ">{product.category}</a> / <a href=" ">OuterWear</a>
                 </div>
-                <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--tablet--hide aem-GridColumn--phone--hide images_column">
-                    <figure> 
-                    <img src={image} alt={title}/>  
-                    </figure>
-                    <figure> 
-                    <img src={image} alt={title}/>  
-                    </figure>
-                    <figure > 
-                    <img src={image} alt={title}/>  
-                    </figure>
-                    <figure> 
-                    <img src={image} alt={title}/>  
-                    </figure>
-                    <figure> 
-                    <img src={image} alt={title}/>  
-                    </figure>
-                
-                    <button> 
-                    <img classname="imagesdown_arr" src={require('../../Images/chevron-down.svg').default}alt={title}/>  
-                    </button>
+                <div className="aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--tablet--12 aem-GridColumn--phone--hide main_image">
+                <SliderImage
+                    data={data}
+                    width="100%"
+                    showDescription={false}
+                    direction="right"
+		        />
+               
                 </div>
-                <div className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 main_image">
-                    <figure className="single_image"> 
-                        <img src={image} alt={title}/>  
-                    </figure>
-                    <div className="prodGallary_images">
+                <div className="prodGallary_images">
                     <Carousel image={image} title={title}/>
                     </div>
-                    
-                </div>
             </div>
         </div>
 

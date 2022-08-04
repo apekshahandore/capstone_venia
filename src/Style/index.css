@@ -6046,6 +6046,92 @@ footer .footer-bottom .left-nav li a {
   color: #1B252C;
 }
 
+.product_image .react-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.product_image .react-slider .react-slider__ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 17px 0 0;
+}
+
+.product_image .react-slider .react-slider__ul li {
+  width: 100px;
+  margin: 0 0 16px;
+  border: 1px solid #ddd;
+  border-bottom-width: 4px;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+.product_image .react-slider .react-slider__ul li.active {
+  border-bottom-color: #E26A2C;
+}
+
+.product_image .react-slider .react-slider__ul li img {
+  border: 0;
+}
+
+.product_image .react-slider .react-slider__container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.product_image .react-slider .react-slider__imgZoom {
+  width: 100%;
+}
+
+.product_image .react-slider .react-slider__btnPrev,
+.product_image .react-slider .react-slider__btnNext {
+  display: none;
+}
+
+.product_image .react-slider .react-slider__picture,
+.product_image .react-slider .react-slider__ul li {
+  position: relative;
+}
+
+.product_image .react-slider .react-slider__picture::before,
+.product_image .react-slider .react-slider__ul li::before {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.product_image .react-slider .react-slider__picture img,
+.product_image .react-slider .react-slider__ul li img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.product_image .react-slider .react-slider__picture {
+  min-height: 600px;
+}
+
+.product_image .react-slider .react-slider__picture img {
+  padding: 0.7em;
+}
+
+.product_image .react-slider .react-slider__imgZoom {
+  opacity: 0;
+  z-index: 0;
+}
+
 .product_image .category_left {
   display: none;
 }
@@ -6912,8 +6998,8 @@ footer .footer-bottom .left-nav li a {
     font-family: Muli;
     color: #1B252C;
   }
-  .product_details {
-    padding-left: 0;
+  .prod_Description {
+    padding-bottom: 20px;
   }
   .prod_Description .mainprod_head {
     text-align: center;
@@ -6936,8 +7022,13 @@ footer .footer-bottom .left-nav li a {
   .prod_Description .right_details h5 {
     text-align: center;
   }
-  .prod_Description .right_details button {
-    display: none;
+  .prod_Description .right_details .border {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .prod_Description .left_details {
     padding: 24px 0 40px 0;

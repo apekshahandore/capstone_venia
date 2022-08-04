@@ -630,10 +630,11 @@ h5{
         }
     }
    
-    .product_details {
-     padding-left: 0; 
-    }
+    // .product_details {
+    //  padding-left: 0; 
+    // }
     .prod_Description{
+        padding-bottom: 20px;
         .mainprod_head{
             text-align:center ;
         }
@@ -650,9 +651,9 @@ h5{
             h5{
                 text-align: center;
             }
-            button{
-                display: none;
-       
+        .border {
+                display: flex;
+                justify-content: center;
             }
           
         }
