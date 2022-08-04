@@ -16,6 +16,10 @@ function App() {
     <Routes>
     <Route path="/" element={<Home />} /> 
     <Route exact path="/productListing" element={<ProductListing />} /> 
+    <Route exact path="/productListing/women_clothing" element={<ProductListing />} /> 
+    <Route exact path="/productListing/men_clothing" element={<ProductListing />} /> 
+    <Route exact path="/productListing/jewelery" element={<ProductListing />} /> 
+    <Route exact path="/productListing/electronics" element={<ProductListing />} /> 
     <Route exact path="/products/:id" element={<ProductDetails />} /> 
     <Route exact path="/cart" element={<Cart />} /> 
     <Route exact path="/checkout" element={<Checkout />} /> 

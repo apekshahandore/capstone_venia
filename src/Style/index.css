@@ -5204,7 +5204,7 @@ header nav .main_menus ul li:not(:last-child) {
   padding-right: 32px;
 }
 
-header nav .main_menus ul li .active_border {
+header nav .main_menus ul li .active {
   border-bottom: 4px solid #FFD07F;
   padding-bottom: 0.7rem;
 }
