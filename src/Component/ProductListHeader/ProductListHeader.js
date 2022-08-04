@@ -4,12 +4,12 @@ import arrowup  from "../../Images/arrow-up.svg"
 import arrowdown from "../../Images/arrow-down.svg"
 import MobileFilterBar from "../../Layout/MobileSideBar/MobileFilterBar";
 import { useState } from "react";
-const ProdutListHeader=({totalProducts,sortProduct, lowToHigh, highToLow})=>{
+const ProdutListHeader=({totalProducts,sortProduct, lowToHigh, highToLow,handleChange,categories})=>{
   const [isclicked, setClicked]= useState(false);
 return(
   <>
         {
-                isclicked && <MobileFilterBar onClose={()=>{
+                isclicked && <MobileFilterBar handleChange={handleChange} categories={categories} onClose={()=>{
                   setClicked(false);
                 }}/> 
           }

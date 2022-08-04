@@ -1,7 +1,7 @@
 import {filterCategories} from "../../Data";
 import Button from "../../Component/Button/Button";
 import closeIcon from "../../Images/x.svg"
-const MobileFilterBar=({onClose})=>{
+const MobileFilterBar=({onClose,handleChange,categories})=>{
    const closeSideBar=()=>{
     onClose();
    }
@@ -25,11 +25,13 @@ const MobileFilterBar=({onClose})=>{
         <h6>Categories</h6>
         {
             filterCategories.map((val)=>{
+                let cat= val.name;
                 return(<div className="checkbox"> 
                             <input type="checkbox"
                             id={val.id}
                             name={val.name}
-                          
+                            onChange={handleChange}
+                            checked={categories}
                             /> 
                             <label htmlFor={val.id} className="checkbox">{val.label}</label>
                         </div>);

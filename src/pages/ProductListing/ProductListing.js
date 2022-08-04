@@ -74,7 +74,13 @@ const ProductListing=()=>{
     
         <ProductListingBanner text={`Men's`}/>
         <section className="aem-Grid aem-Grid--12 container">
-        <ProdutListHeader totalProducts={totalProducts} sortProduct={sortProduct} lowToHigh={sortProductLTH} highToLow={sortProductHTL}/>
+        <ProdutListHeader 
+        totalProducts={totalProducts} 
+        sortProduct={sortProduct} 
+        lowToHigh={sortProductLTH} 
+        highToLow={sortProductHTL}
+        handleChange={handleChange}    
+        />
       
         <aside className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--tablet--3 aem-GridColumn--phone--hide">
          {/* <FilterContainer filterProduct={filterProduct}/> */}
