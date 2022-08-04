@@ -5,16 +5,19 @@
     }
    
     p{
-        font: normal normal normal 16px/24px Muli;
+      
+        @include mainFont($font-size-16, $line-spacing-24, $font-family-muli, $font-style-normal);
         max-width: 100%;
     }
     h1{
-        font: normal normal 600 36px/45px Source Serif Pro;
+        
+        @include mainFont($font-size-36, $line-spacing-45,$font-family-source-serif-pro, $font-weight-600);
        
     }
     h5{
         padding-bottom: 16px;
-        font: normal normal 600 20px/25px Muli;
+   
+        @include mainFont($font-size-20, $line-spacing-25,$font-family-muli, $font-weight-600);
     }
     .right_details{
         padding-top: 24px;

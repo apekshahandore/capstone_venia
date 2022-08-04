@@ -18,7 +18,7 @@
 .teaserbanner_sectwo{
     text-align: center;
     align-items: center;
-    background-color: #1B252C;
+    background-color: $black;
     width: 38%;
     height: 380px;
     display: flex;
@@ -27,18 +27,18 @@
     position: relative;
 }
 .teaserbanner_sectwo > h2{
-    font: normal normal 600 40px/62px Source Serif Pro;
+
+    @include mainFont($font-size-40, $line-spacing-62, $font-family-source-serif-pro, $font-weight-600);
     max-width: 100%;
     margin-bottom: 16px;
-    .mobile_hide{
-        display: none;
-    }
+ 
 }
 .teaserbanner_sectwo > h2 span{
     display: block;
 }
 .teaserbanner_sectwo > span{
-    font: normal normal 600 20px/25px Muli;
+
+    @include mainFont($font-size-20, $line-spacing-25, $font-family-muli, $font-weight-600);
     margin-bottom: 16px;
 }
 .teaserbanner_sectwo> .shop_devices{
@@ -79,7 +79,7 @@
         left: 82.5px;
         top: -22px;
         padding-bottom: 5px;
-        border-bottom: 8px solid #1363DF;
+        border-bottom: 8px solid $primary-d1;
     }
     .teaserbanner_sectwo > hr {
         display: none;
@@ -89,7 +89,7 @@
         text-align: center !important;
      }
      .teaserbanner_sectwo > h2 span{
-        display: block;
+        display: none;
     }
     
     
@@ -119,35 +119,7 @@
        display: none;
     }
     .teaserbanner_sectwo > h2 span{
-        display: block;
-    }
-}
-
-@media screen and (min-width:768px) and (max-width:1024px) {
-    .teaserbanner_sectwo {
-        width: 90%;
-        margin: 0 16px;
-    } 
-    .teaserbanner_secone{
-        width: 100%;
-    }
-    .teaserbanner_secone > img {
-        width: 100%;
-        height: 250px;
-        position: relative;
-        top: 40px;
-    }
-    .teaserbanner_sectwo > hr {
         display: none;
-     }
-     .teaserbanner_sectwo > img {
-        left: 82.5px;
-        top: -22px;
-        padding-bottom: 10px;
-        border-bottom: 8px solid $primary-brand;
-    }
-    .teaserbanner_sectwo > h2 span{
-        display: block;
     }
 }
 

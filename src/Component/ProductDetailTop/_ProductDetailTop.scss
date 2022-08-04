@@ -7,7 +7,9 @@
   .images_column{
     padding-right: 17px;
     figure{
-      // border: 1px solid $gray-l1;
+       &:first-child{
+        border-bottom: 4px solid $primary-brand;
+       }
       &:not(:last-child){
       margin-bottom: 14px;
     
@@ -34,10 +36,10 @@
   }
   .main_image{
     figure{
-      // border: 1px solid $gray-l1;
+    
       img{
         height:680px;
-        // padding: 3em;
+  
       }
     }
     .single_image{
@@ -60,7 +62,8 @@
   }
   h1{
  
-    font: normal normal 600 36px/45px Source Serif Pro;
+  
+    @include mainFont($font-size-36, $line-spacing-45,$font-family-source-serif-pro,$font-weight-600 );
     padding-top: 20px;
   
 
@@ -90,17 +93,18 @@
       .stars-outer::before {
         content: '\f005  \f005  \f005  \f005  \f005';
         font-family: 'FontAwesome';
-        font-weight: 500;
-        font-size: 16px;
+        font-weight: $font-weight-500;
+        font-size: $font-size-16;
+
         color: #ccc;
       }
       
       .stars-inner::before {
         content: '\f005  \f005  \f005  \f005  \f005';
-        font-size: 16px;
+        font-size: $font-size-16;
         font-family: 'FontAwesome';
-        font-weight: 500;
-        color:black;
+        font-weight: $font-weight-500;
+        color:$main_black;
       }
       .number-rating {
         font-size: $font-size-14;
@@ -146,7 +150,7 @@
           @include filterBox;
           border: 2px solid $gray-m1;
           text-align: center;
-          font: normal normal 600 16px/20px Muli;
+          @include mainFont($font-size-16, $line-spacing-20, $font-family-muli, $font-weight-600);
           background-color: $white;
          
          

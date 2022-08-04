@@ -10,7 +10,7 @@ import menImg from "./Images/prod2.PNG";
 import jwelleryImg from "./Images/prod3.PNG";
 import electronicsImg from "./Images/prod4.PNG";
 export const navMainMenu=[{
-    id:"NMM0", list:"Home", link:"/"
+    id:"NMM0", list:"Home", link:"/", border:"active_border"
 },{
     id:"NMM1", list:"Women", link:"/productListing",
 },

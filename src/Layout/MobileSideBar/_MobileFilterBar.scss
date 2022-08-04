@@ -6,10 +6,10 @@
     bottom: 0;
     left: 10%;
     right: 0;
-    background-color: white;
+    background-color:$white;
     height: 200vh;
     animation: moveToRight .5s ease-in-out;
-    
+    // display: none;
         @keyframes moveToRight {
             0% {
                 transform: translateX(500px);
@@ -21,8 +21,9 @@
         
     
         h6{
-            font: normal normal 600 16px/24px Muli;
-            color: #181C24;
+    
+            @include mainFont($font-size-16, $line-spacing-24, $font-family-muli, $font-weight-600);
+            color: $black-l2;
         }
         nav{
 
@@ -36,8 +37,9 @@
                 display: flex;
                 justify-content: space-between;
                     li{
-                    font: normal normal 600 16px/24px Muli;
-                    color: #1D1D1B;
+            
+                    @include mainFont($font-size-16, $line-spacing-24, $font-family-muli, $font-weight-600);
+                    color: $black-m1;
                     letter-spacing: 0.32px;
                     }
                 }
@@ -50,17 +52,16 @@
             padding: 16px 0 32px 24px;
             border-bottom: 2px solid $gray-l1;
             a{
-                font-size: $font-size-14;
+                @include mainFont($font-size-14, $line-spacing-24, $font-family-muli, $font-style-normal);
                 color: $gray-d2;
-                line-height: 24px;
                 text-decoration: underline;
-                font-family: $font-family-muli;
+         
             }
             .checkbox{  
                 padding-top: 16px;
                 input{
-                    accent-color: #E26A2C;
-                    border: 2px solid #E26A2C;
+                    accent-color: $primary-brand;
+                    border: 2px solid $primary-brand;
                     width: 24px;
                     height: 24px;
                   

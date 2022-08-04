@@ -9,12 +9,14 @@ footer{
 
 
         .submenu__heading{
-            font: normal normal 600 16px/24px Muli;
+ 
+            @include mainFont($font-size-16, $line-spacing-24, $font-family-muli, $font-weight-600);
             color: $color-172026;
             padding-bottom: $font-size-16;
         }
         a,p{
-            font: normal normal normal 16px/24px Muli;
+         
+            @include mainFont($font-size-16, $line-spacing-24, $font-family-muli, $font-style-normal);
               color: $grey-dark;
               padding-bottom:8px;
         }
@@ -43,18 +45,16 @@ footer{
     figure{ 
        
             img{ 
-                width:6rem;
-                object-fit:cover;
-                //  vertical-align: middle;
-                 height: 24px;
+                    width:6rem;
+                    object-fit:cover;
+                     height: 24px;
             }
         }
     .copyright{
             text-align: center;
-            font-size: $font-size-14;
-            line-height: $line-spacing-17-5;
+            @include mainFont($font-size-14, $line-spacing-17-5, $font-family-muli, $font-style-normal);
             color: $grey-dark;
-            font-family: $font-family-muli;
+            
         }
     .left-nav{
             ul{
@@ -62,7 +62,8 @@ footer{
                 justify-content: space-between;
             }
             li a{
-                font: normal normal normal 14px/18px Proxima Nova;
+      
+                @include mainFont($font-size-14, $line-spacing-18, $font-family-Proxima, $font-style-normal);
                 line-height: $line-spacing-17-5;
                 color: $color-172026;
                 text-decoration: underline;

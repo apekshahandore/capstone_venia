@@ -19,12 +19,14 @@
   
    strong{
    
-    font: normal normal 600 20px/25px Muli;
+
+    @include mainFont($font-size-20, $line-spacing-25, $font-family-muli, $font-weight-600);
     color: $black;
    }
    p{
     padding-top: 8px;
-    font: normal normal normal 16px/24px Muli;
+
+    @include mainFont($font-size-16, $line-spacing-24, $font-family-muli, $font-style-normal);
     color: $black;
    }
   
@@ -44,7 +46,7 @@
         color:  $gray-l2;
     }
     button:disabled {
-        background: #dddddd;
+        background: $grey-l0;
       }
  input{
     width: 88px;
@@ -54,12 +56,9 @@
     border-radius: 8px;
     text-align: center;
     margin: 0 8px;
- }
-
+        }
+    }
 }
-   
-
- }
  
 
  .singleCart_action{
@@ -68,13 +67,15 @@
     button{
     background: none;
     color: $black;
-    font: normal normal 600 12px/14px Muli;
+  
+    @include mainFont($font-size-12, $line-spacing-14, $font-family-muli, $font-weight-600);
     border: none
     
     }
     a{
         color: $black;
-        font: normal normal 600 12px/14px Muli; 
+  
+        @include mainFont($font-size-12, $line-spacing-14, $font-family-muli, $font-weight-600);
     }
     img{
         vertical-align: middle;

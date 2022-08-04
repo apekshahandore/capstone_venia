@@ -6,7 +6,8 @@
 
         h1{
             padding-bottom: 10px;
-            font: normal normal 600 48px/45px Source Serif Pro;
+   
+            @include mainFont($font-size-48, $line-spacing-45, $font-family-source-serif-pro,$font-weight-600);
         }
     }
     .border_link{
@@ -20,21 +21,24 @@
     padding-bottom: 32px;
     
     h3{
-        font: normal normal 600 20px/25px Muli;
+      
+        @include mainFont($font-size-20, $line-spacing-25, $font-family-muli,$font-weight-600);
         letter-spacing: 0px;
         color: #172026;
         padding-bottom: 32px;
     }
     h4{
         padding-bottom: 16px;
-        font: normal normal 600 16px/20px Muli;
+        
+        @include mainFont($font-size-16, $line-spacing-20, $font-family-muli,$font-weight-600);
         letter-spacing: 0px;
         color: #172026;
     }
   
     .order_para{
         padding: 16px 0;
-        font: normal normal normal 16px/24px Muli;
+   
+        @include mainFont($font-size-16, $line-spacing-24, $font-family-muli,$font-style-normal);
         letter-spacing: 0px;
         color: #172026;
         max-width: 90%;
@@ -55,8 +59,8 @@
         
     
     .social_card{
-        background: #FF8243 0% 0% no-repeat padding-box;
-        border: 1px solid #D1D3D6;
+        background: $primary-d1 0% 0% no-repeat padding-box;
+        border: 1px solid $border-color;
         border-radius: 2px;
         text-align: center;
         padding: 39px 0;
@@ -64,9 +68,10 @@
        
         h2{
             max-width: 100%;
-            font: normal normal 600 36px/45px Source Serif Pro;
+
+            @include mainFont($font-size-36, $line-spacing-45, $font-family-source-serif-pro,$font-weight-600);
             letter-spacing: 0px;
-            color: #FFFFFF;
+            color: $white;
         }
     }
         .social_links{

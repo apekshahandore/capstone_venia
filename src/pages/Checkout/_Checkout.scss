@@ -5,7 +5,8 @@
         text-align: center;
         h1{
             padding-bottom: 10px;
-            font: normal normal 600 48px/45px Source Serif Pro;
+        
+            @include mainFont($font-size-48, $line-spacing-45, $font-family-source-serif-pro,$font-weight-600);
         }
     }
     .border_link{
@@ -24,8 +25,9 @@
         padding-right: 32px;
         h2{
             padding-bottom: 20px;
-            font: normal normal 600 36px/30px Source Serif Pro;
-            color: #172026;
+    
+            @include mainFont($font-size-36, $line-spacing-30, $font-family-source-serif-pro,$font-weight-600);
+            color: $color-172026;
         }
     }
   
@@ -36,13 +38,14 @@
     .estimating {
         margin-bottom: 128px;
             .section1, .section2 {
-                border-top: 1px solid #d1d3d6;
+                border-top: 1px solid $border-color;
                 padding: 24px 0 24px 0;
-                color: #72777F;
-                font: normal normal 600 20px/25px Muli;
+                color: $grey-m0;
+               
+                @include mainFont($font-size-20, $line-spacing-25, $font-family-muli,$font-weight-600);
             }
             .section2, .topbottom-border {
-                border-bottom: 1px solid #d1d3d6;
+                border-bottom: 1px solid $border-color;
                 padding: 20px 20px 20px 0;
             }
            

@@ -6,10 +6,9 @@
     left: 0;
     width: 100%;
     padding: 0;
-    background-color: white;
-    box-shadow: 0px 8px 16px #00000026;
+    background-color: $white;
+    box-shadow: 0px 8px 16px $black-m2;
     z-index: 100;
-    // min-height: 120vh;
     height: 100%;
     overflow-y: auto;
     display: none;
@@ -29,15 +28,16 @@
     background-color: $gray-l1;
     padding: 11px 24px 13px 24px;
     position: sticky;
-    box-shadow: 35px 35px 35px #0000000D;
+    box-shadow: 35px 35px 35px $black-l3;
     top: 0;
  
         ul {
             display: flex;
             justify-content: space-between;
                 li{
-                font: normal normal 600 16px/24px Muli;
-                color: #1D1D1B;
+           
+                @include mainFont($font-size-16, $line-spacing-24, $font-family-muli, $font-weight-600);
+                color: $black-m1;
                 letter-spacing: 0.32px;
                 }
             }
@@ -45,17 +45,19 @@
     .navlink{
         padding:16px 0 16px 24px;
         border-bottom: 2px solid $gray-l1;
-        font: normal normal normal 16px/24px Muli;
-        color: #172026;
+      
+        @include mainFont($font-size-16, $line-spacing-24, $font-family-muli, $font-style-normal);
+        color: $color-172026;
         &:hover{
             background-color: rgb(221, 213, 213);
             color: white;
-            box-shadow: 35px 35px 35px #0000000D;
+            box-shadow: 35px 35px 35px $black-l3;
+              transition: .5s;
         }
     }
     .Mobile_contactfooter {
       margin-top: 20rem;
-        box-shadow: 35px 35px 35px #0000000D;
+        box-shadow: 35px 35px 35px $black-l3;
         padding:16px 24px 16px 24px;
         border-top: 2px solid $gray-l1;
         border-bottom: 2px solid $gray-l1;
@@ -65,8 +67,9 @@
               
                li{
                 justify-content: space-between ;
-                font: normal normal normal 16px/24px Muli;
-                color: #172026;
+     
+                @include mainFont($font-size-16, $line-spacing-24, $font-family-muli, $font-style-normal);
+                color: $color-172026;
                }
     
     }

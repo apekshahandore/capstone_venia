@@ -4,10 +4,15 @@
     position: relative;
     height: 320px;
     border-bottom: 8px solid $primary-brand;
-    background-color: #FFFFFF;
+    background-color:$white;
     width: 100%;
     &:not(:last-child){
         margin-right: 13px;
+    }
+    &:hover{
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+        transition: box-shadow 0.5s;
+      
     }
     img{
         display: block;
@@ -17,20 +22,22 @@
     .overlay {
         position: absolute; 
         bottom: 0; 
-        background: #1B252CD9;
+        background: $overlay-bg;
         width: 100%;
         opacity:1;
         padding: 17px 17px ;  
         
         
         h4{
-            font: normal normal 600 24px/30px Source Serif Pro;
-            color: #FFFFFF;
+        
+            @include mainFont($font-size-24, $line-spacing-30,$font-family-source-serif-pro, $font-weight-600);
+            color: $white;
            
         }
         p{
-            font: normal normal normal 14px/23px Muli;
-            color: #FFFFFF;
+       
+            @include mainFont($font-size-14, $line-spacing-23, $font-family-muli, $font-style-normal);
+            color: $white;
             max-width: 100%;
         }
       }

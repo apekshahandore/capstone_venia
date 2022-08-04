@@ -4,7 +4,8 @@
     border: 1px solid #D1D3D6;
     border-radius: 2px;
     h4{
-        font: normal normal 600 16px/20px Muli;
+       
+        @include mainFont($font-size-16, $line-spacing-20, $font-family-muli, $font-weight-600);
         color: #172026;
     }
 }

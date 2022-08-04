@@ -37,11 +37,11 @@
     display: none;
     margin-top: 32px;
     :first-child{
-        background-color: white;
+        background-color: $white;
     } 
     button {
     border-radius: 50%;
-    background-color: #666666;
+    background-color:$grey-m0;
     padding: 0.3em;
     border: none;
     margin-left: 20px;

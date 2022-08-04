@@ -39,7 +39,7 @@ const ReviewInfo=({acctwoHandler,accHandler,accPay})=>{
                         />
                         <OrderItemContainer />
                         <div className="action">
-                        <Button arialabel="place order" text="Place Order" text1="CONTINUE" className="btn_lab placeorder_button" onClick={pageHandler}/>
+                        <Button arialabel="place order" text="Place Order" className="btn_lab placeorder_button" onClick={pageHandler}/>
                         </div>
                         <div className="action">
                                 <p>By clicking confirm order you agree to our <a href=" ">Terms and Conditions</a> </p>

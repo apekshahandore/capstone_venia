@@ -15,7 +15,8 @@
 
   
     h1 {
-        font: normal normal 600 48px/60px Source Serif Pro;
+ 
+        @include mainFont($font-size-48, $line-spacing-60, $font-family-source-serif-pro, $font-weight-600);
             }
         h2.hide_head {
             display: none;
@@ -37,7 +38,8 @@
     .rightside_banner{
         padding:16px 0 ;
         img{
-            object-fit: fill;
+            object-fit: cover;
+            object-position: 100% 30%;
             height: 320px;
         }
     }

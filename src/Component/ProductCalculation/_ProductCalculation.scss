@@ -4,11 +4,12 @@
 .product_summary{
  
     padding: 32px 24px 40px 32px;
-    box-shadow: 0px 0px 8px #0000000D;
-    border: 1px solid #D1D3D6;
+    box-shadow: 0px 0px 8px $black-l3;
+    border: 1px solid $border-color;
     border-radius: 2px;
     h3{
-        font: normal normal 600 20px/25px Muli;
+  
+        @include mainFont($font-size-20, $line-spacing-25, $font-family-muli, $font-weight-600);
         color: $black;
     }
     .product_calculation{
@@ -16,7 +17,8 @@
         .calculation_row{
             display: flex;
             justify-content: space-between;
-            font: normal normal normal 16px/24px Muli;
+      
+            @include mainFont($font-size-16, $line-spacing-24, $font-family-muli, $font-style-normal);
             color: $black;
             &:not(:last-child){
                 padding-bottom: 16px;
@@ -37,8 +39,6 @@
             }
         }
         .paypal_btn{
-            // width: 244px;
-            // height: 38px;
             width: 77%;
             margin: 0 auto;
             margin-top: 24px;

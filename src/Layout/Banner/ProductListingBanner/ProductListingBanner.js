@@ -1,4 +1,4 @@
-import bannerImg from "../../../Images/producthero.PNG"
+import bannerImg from "../../../Images/homebannermain.png"
 const ProductListingBanner=({text})=>{
 return(
     <div className="aem-Grid aem-Grid--12 main_banner">

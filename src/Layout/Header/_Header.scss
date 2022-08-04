@@ -18,8 +18,12 @@ nav{
 
     .mobile_menu{
         display:none;
-        width: 18px;
-        height: 12px;
+    
+        img{
+            width: 18px;
+            height: 12px;
+            
+        }
     }
     .logo{ 
        
@@ -42,11 +46,22 @@ nav{
            li{
             &:not(:last-child){
                 padding-right: 32px;
+              
              } 
+             .active_border{
+                border-bottom: 4px solid $primary-l1;
+                padding-bottom: 0.7rem;
+            }
              span{
+                
                 text-align: right;
                 @include font-two;
                 color: $white;
+                &:hover{
+                    color: $main_black;
+                    font-weight: bold;
+                    transition: .5s;
+                }
             }
            }
             
@@ -56,7 +71,9 @@ nav{
  
         ul{     
             text-align: right;
+        
           li{
+            padding-right: 16px;
             img{
                 width:22px;
                 height:24px;

@@ -1,5 +1,4 @@
 .teaserbanner_one{
-//    margin: 48px 0;
     padding-top: 48px;
     padding-bottom: 48px;
     align-items: stretch;
@@ -8,22 +7,25 @@
     .teaserbanner_content{
         padding:40px 0 56px 100px;
         h1{
-            font: normal normal 600 48px/60px Source Serif Pro;
-            color: #172026;
+           
+            @include mainFont($font-size-48, $line-spacing-60, $font-family-source-serif-pro, $font-weight-600);
+            color: $color-172026;
             max-width: 100%;
         }
         strong{
            
             padding-top: 8px;
-            font: normal normal 600 20px/25px Muli;
-            color: #172026;
+            @include mainFont($font-size-20, $line-spacing-25, $font-family-muli, $font-weight-600);
+      
+            color: $color-172026;
             max-width: 100%;
         }
         p{
            
             padding: 16px 0 24px 0;
-            font: normal normal normal 14px/24px Muli;
-            color: #172026;
+            @include mainFont($font-size-14, $line-spacing-24, $font-family-muli, $font-style-normal);
+           
+            color: $color-172026;
             max-width: 100%;
         }
         .action{
@@ -36,7 +38,7 @@
         padding: 9px 42px;
         color:$primary-brand;
         border: 1px solid $primary-brand;
-        background-color: #fff;
+        background-color:$white;
         margin-right: 10px;
      
     }
@@ -55,13 +57,10 @@
    
     }
     .teaserbanner_image{
-     
-      background-image: url("../../Images/homebanner22.png");
-      background-repeat: no-repeat;
+     background: url("../../Images/homebanner22.png") no-repeat ;
       background-size: 100% 150%;
       min-height: 100%;
       float: none;
-      
        
     }
 }

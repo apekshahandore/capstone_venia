@@ -186,3 +186,10 @@
         margin-bottom: $bottom;
         margin-right: $right;
     }
+    @mixin mainFont($fontSize, $lineHeight, $fontFamily, $fontWeight){
+      font-size:$fontSize ;
+      font-weight:$fontWeight ;
+      line-height:$lineHeight ;
+      font-family:$fontFamily ;
+      
+    }

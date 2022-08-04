@@ -9,12 +9,15 @@
     &:hover, 
     &:focus {
     animation: pulse 1s;
-    box-shadow: 0 0 0 0.2em rgba(#fff,0);
+    box-shadow: 0 0 0 0.2em rgba($white,0);
+    transition: box-shadow 0.5s;
+  
     cursor: pointer;
     }
 
     @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 black; 
+    0% { 
+        box-shadow: 0 0 0 0 $main_black; 
     }
     }
 }  

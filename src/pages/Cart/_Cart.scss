@@ -12,7 +12,8 @@
         border: none;
     }
         h1{
-            font: normal normal 600 48px/45px Source Serif Pro;
+         
+            @include mainFont($font-size-48, $line-spacing-45, $font-family-source-serif-pro,$font-weight-600);
             color: $black;
             padding-bottom: 10px;
         }
@@ -31,13 +32,15 @@
     }
     .empty_card{
         text-align: center;
-        color: red;
-        font: normal normal 600 20px/24px muli;
+        color: $negative-2;
+       
+        @include mainFont($font-size-20, $line-spacing-24, $font-family-muli,$font-weight-600);
     }
     .emptyCard_message{
         padding-top: 16px;
         text-align: center; 
-        font: normal normal 600 20px/24px muli;
+        
+        @include mainFont($font-size-20, $line-spacing-24, $font-family-muli,$font-weight-600);
     }
     .center{
         display: flex;

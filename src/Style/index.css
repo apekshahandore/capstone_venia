@@ -5176,6 +5176,9 @@ header nav {
 
 header nav .mobile_menu {
   display: none;
+}
+
+header nav .mobile_menu img {
   width: 18px;
   height: 12px;
 }
@@ -5201,6 +5204,11 @@ header nav .main_menus ul li:not(:last-child) {
   padding-right: 32px;
 }
 
+header nav .main_menus ul li .active_border {
+  border-bottom: 4px solid #FFD07F;
+  padding-bottom: 0.7rem;
+}
+
 header nav .main_menus ul li span {
   text-align: right;
   font-size: 16px;
@@ -5211,8 +5219,19 @@ header nav .main_menus ul li span {
   color: #FFFFFF;
 }
 
+header nav .main_menus ul li span:hover {
+  color: black;
+  font-weight: bold;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
 header nav .right_nav ul {
   text-align: right;
+}
+
+header nav .right_nav ul li {
+  padding-right: 16px;
 }
 
 header nav .right_nav ul li img {
@@ -5282,13 +5301,19 @@ footer .footer-top {
 }
 
 footer .footer-top .submenu__heading {
-  font: normal normal 600 16px/24px Muli;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  font-family: Muli;
   color: #172026;
   padding-bottom: 16px;
 }
 
 footer .footer-top a, footer .footer-top p {
-  font: normal normal normal 16px/24px Muli;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  font-family: Muli;
   color: #545D63;
   padding-bottom: 8px;
 }
@@ -5324,9 +5349,10 @@ footer .footer-bottom figure img {
 footer .footer-bottom .copyright {
   text-align: center;
   font-size: 14px;
+  font-weight: normal;
   line-height: 17.5px;
-  color: #545D63;
   font-family: Muli;
+  color: #545D63;
 }
 
 footer .footer-bottom .left-nav ul {
@@ -5339,7 +5365,10 @@ footer .footer-bottom .left-nav ul {
 }
 
 footer .footer-bottom .left-nav li a {
-  font: normal normal normal 14px/18px Proxima Nova;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  font-family: Proxima Nova;
   line-height: 17.5px;
   color: #172026;
   text-decoration: underline;
@@ -5377,7 +5406,7 @@ footer .footer-bottom .left-nav li a {
 
 .homebanner .homebanner_content h1 {
   font-size: 48px;
-  font-weight: 600px;
+  font-weight: 600;
   font-family: Source Serif Pro;
   line-height: 60px;
   max-width: 30rem;
@@ -5399,7 +5428,7 @@ footer .footer-bottom .left-nav li a {
 }
 
 .homebanner .homebanner_content .dots_action :first-child {
-  background-color: white;
+  background-color: #FFFFFF;
 }
 
 .homebanner .homebanner_content .dots_action button {
@@ -5445,6 +5474,10 @@ footer .footer-bottom .left-nav li a {
           animation: pulse 1s;
   -webkit-box-shadow: 0 0 0 0.2em rgba(255, 255, 255, 0);
           box-shadow: 0 0 0 0.2em rgba(255, 255, 255, 0);
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
   cursor: pointer;
 }
 
@@ -5480,6 +5513,15 @@ footer .footer-bottom .left-nav li a {
   margin-right: 13px;
 }
 
+.category_card:hover {
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+}
+
 .category_card img {
   display: block;
   width: 100%;
@@ -5496,12 +5538,18 @@ footer .footer-bottom .left-nav li a {
 }
 
 .category_card .overlay h4 {
-  font: normal normal 600 24px/30px Source Serif Pro;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  font-family: Source Serif Pro;
   color: #FFFFFF;
 }
 
 .category_card .overlay p {
-  font: normal normal normal 14px/23px Muli;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 23px;
+  font-family: Muli;
   color: #FFFFFF;
   max-width: 100%;
 }
@@ -5522,21 +5570,30 @@ footer .footer-bottom .left-nav li a {
 }
 
 .teaserbanner_one .teaserbanner_content h1 {
-  font: normal normal 600 48px/60px Source Serif Pro;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 60px;
+  font-family: Source Serif Pro;
   color: #172026;
   max-width: 100%;
 }
 
 .teaserbanner_one .teaserbanner_content strong {
   padding-top: 8px;
-  font: normal normal 600 20px/25px Muli;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  font-family: Muli;
   color: #172026;
   max-width: 100%;
 }
 
 .teaserbanner_one .teaserbanner_content p {
   padding: 16px 0 24px 0;
-  font: normal normal normal 14px/24px Muli;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  font-family: Muli;
   color: #172026;
   max-width: 100%;
 }
@@ -5554,7 +5611,7 @@ footer .footer-bottom .left-nav li a {
   padding: 9px 42px;
   color: #E26A2C;
   border: 1px solid #E26A2C;
-  background-color: #fff;
+  background-color: #FFFFFF;
   margin-right: 10px;
 }
 
@@ -5576,8 +5633,7 @@ footer .footer-bottom .left-nav li a {
 }
 
 .teaserbanner_one .teaserbanner_image {
-  background-image: url("../../Images/homebanner22.png");
-  background-repeat: no-repeat;
+  background: url("../../Images/homebanner22.png") no-repeat;
   background-size: 100% 150%;
   min-height: 100%;
   float: none;
@@ -5632,13 +5688,12 @@ footer .footer-bottom .left-nav li a {
 }
 
 .teaserbanner_sectwo > h2 {
-  font: normal normal 600 40px/62px Source Serif Pro;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 62px;
+  font-family: Source Serif Pro;
   max-width: 100%;
   margin-bottom: 16px;
-}
-
-.teaserbanner_sectwo > h2 .mobile_hide {
-  display: none;
 }
 
 .teaserbanner_sectwo > h2 span {
@@ -5646,7 +5701,10 @@ footer .footer-bottom .left-nav li a {
 }
 
 .teaserbanner_sectwo > span {
-  font: normal normal 600 20px/25px Muli;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  font-family: Muli;
   margin-bottom: 16px;
 }
 
@@ -5695,7 +5753,7 @@ footer .footer-bottom .left-nav li a {
     left: 82.5px;
     top: -22px;
     padding-bottom: 5px;
-    border-bottom: 8px solid #1363DF;
+    border-bottom: 8px solid #FF8243;
   }
   .teaserbanner_sectwo > hr {
     display: none;
@@ -5704,7 +5762,7 @@ footer .footer-bottom .left-nav li a {
     text-align: center !important;
   }
   .teaserbanner_sectwo > h2 span {
-    display: block;
+    display: none;
   }
 }
 
@@ -5733,42 +5791,15 @@ footer .footer-bottom .left-nav li a {
     display: none;
   }
   .teaserbanner_sectwo > h2 span {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .teaserbanner_sectwo {
-    width: 90%;
-    margin: 0 16px;
-  }
-  .teaserbanner_secone {
-    width: 100%;
-  }
-  .teaserbanner_secone > img {
-    width: 100%;
-    height: 250px;
-    position: relative;
-    top: 40px;
-  }
-  .teaserbanner_sectwo > hr {
     display: none;
-  }
-  .teaserbanner_sectwo > img {
-    left: 82.5px;
-    top: -22px;
-    padding-bottom: 10px;
-    border-bottom: 8px solid #E26A2C;
-  }
-  .teaserbanner_sectwo > h2 span {
-    display: block;
   }
 }
 
 .card {
   padding-bottom: 20px;
-  -webkit-transition: 0.1s ease-in;
-  transition: 0.1s ease-in;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
 }
 
 .card:not(:nth-child(3n)) {
@@ -5786,6 +5817,15 @@ footer .footer-bottom .left-nav li a {
   line-height: 0;
 }
 
+.card figure:hover {
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+}
+
 .card figure img {
   max-width: 100%;
   height: 300px;
@@ -5796,17 +5836,24 @@ footer .footer-bottom .left-nav li a {
 
 .card .product-details {
   padding-top: 8px;
+  height: 100px;
 }
 
 .card .product-details .product-title {
-  font: normal normal bold 18px/20px Muli;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+  font-family: Muli;
   color: #1B252C;
   display: block;
 }
 
 .card .product-details .product-price {
   margin-top: 5px;
-  font: normal normal 600 16px/20px Muli;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  font-family: Muli;
   color: #1B252C;
 }
 
@@ -5828,25 +5875,29 @@ footer .footer-bottom .left-nav li a {
 
 .filter_aside .filter_container h5 {
   font-size: 20px;
-  color: #181C24;
+  font-weight: normal;
   line-height: 14px;
   font-family: Muli;
+  color: #181C24;
 }
 
 .filter_aside .filter_container h6 {
-  padding: 16px 0;
   font-size: 16px;
-  color: #181C24;
+  font-weight: normal;
   line-height: 24px;
+  font-family: Muli;
+  padding: 16px 0;
+  color: #181C24;
   font-family: Muli;
 }
 
 .filter_aside .filter_container a {
   font-size: 14px;
-  color: #181C24;
+  font-weight: normal;
   line-height: 24px;
-  text-decoration: underline;
   font-family: Muli;
+  color: #181C24;
+  text-decoration: underline;
 }
 
 .filter_aside .filter_container .checkbox {
@@ -5931,7 +5982,7 @@ footer .footer-bottom .left-nav li a {
 
 .category_row .total_result {
   font-size: 16px;
-  font-weight: 600px;
+  font-weight: 600;
   line-height: 20px;
   color: #172026;
   font-family: Muli;
@@ -5954,7 +6005,10 @@ footer .footer-bottom .left-nav li a {
 .mobileview_filterheader .filtergheader_top ul li {
   padding: 32px 16px;
   text-decoration: underline;
-  font: normal normal 600 16px/20px Muli;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  font-family: Muli;
   color: #181C24;
 }
 
@@ -5975,7 +6029,10 @@ footer .footer-bottom .left-nav li a {
 
 .mobileview_filterheader .total_result {
   text-align: center;
-  font: normal normal normal 16px/24px Muli;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  font-family: Muli;
   color: #1B252C;
 }
 
@@ -5985,6 +6042,10 @@ footer .footer-bottom .left-nav li a {
 
 .product_image .images_column {
   padding-right: 17px;
+}
+
+.product_image .images_column figure:first-child {
+  border-bottom: 4px solid #E26A2C;
 }
 
 .product_image .images_column figure:not(:last-child) {
@@ -6032,13 +6093,16 @@ footer .footer-bottom .left-nav li a {
 }
 
 .product_details h1 {
-  font: normal normal 600 36px/45px Source Serif Pro;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 45px;
+  font-family: Source Serif Pro;
   padding-top: 20px;
 }
 
 .product_details h4 {
   font-size: 20px;
-  font-weight: 600px;
+  font-weight: 600;
   line-height: 30px;
   color: #172026;
   font-family: Muli;
@@ -6077,7 +6141,7 @@ footer .footer-bottom .left-nav li a {
 
 .product_details .number-rating {
   font-size: 14px;
-  font-weight: 600px;
+  font-weight: 600;
   line-height: 24px;
   color: #1B252C;
 }
@@ -6099,7 +6163,7 @@ footer .footer-bottom .left-nav li a {
   border: none;
   background: none;
   font-size: 16px;
-  font-weight: 600px;
+  font-weight: 600;
   line-height: 20px;
   color: #172026;
   font-family: Muli;
@@ -6108,7 +6172,7 @@ footer .footer-bottom .left-nav li a {
 
 .product_details .filter_head {
   font-size: 20px;
-  font-weight: 600px;
+  font-weight: 600;
   line-height: 30px;
   color: #172026;
   font-family: Muli;
@@ -6142,7 +6206,10 @@ footer .footer-bottom .left-nav li a {
   border-radius: 6px;
   border: 2px solid #91959C;
   text-align: center;
-  font: normal normal 600 16px/20px Muli;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  font-family: Muli;
   background-color: #FFFFFF;
 }
 
@@ -6172,7 +6239,7 @@ footer .footer-bottom .left-nav li a {
 
 .product_details .product_response a {
   font-size: 16px;
-  font-weight: 600px;
+  font-weight: 600;
   line-height: 20px;
   color: #172026;
   font-family: Muli;
@@ -6191,17 +6258,26 @@ footer .footer-bottom .left-nav li a {
 }
 
 .prod_Description p {
-  font: normal normal normal 16px/24px Muli;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  font-family: Muli;
   max-width: 100%;
 }
 
 .prod_Description h1 {
-  font: normal normal 600 36px/45px Source Serif Pro;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 45px;
+  font-family: Source Serif Pro;
 }
 
 .prod_Description h5 {
   padding-bottom: 16px;
-  font: normal normal 600 20px/25px Muli;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  font-family: Muli;
 }
 
 .prod_Description .right_details {
@@ -6238,7 +6314,10 @@ footer .footer-bottom .left-nav li a {
 }
 
 .main_banner .leftside_banner h1 {
-  font: normal normal 600 48px/60px Source Serif Pro;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 60px;
+  font-family: Source Serif Pro;
 }
 
 .main_banner .leftside_banner h2.hide_head {
@@ -6257,8 +6336,10 @@ footer .footer-bottom .left-nav li a {
 }
 
 .main_banner .rightside_banner img {
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 100% 30%;
+     object-position: 100% 30%;
   height: 320px;
 }
 
@@ -6285,16 +6366,22 @@ footer .footer-bottom .left-nav li a {
     position: absolute;
     text-align: center;
     padding: 0 16px 7rem 16px;
-    background: transparent linear-gradient(181deg, rgba(242, 242, 242, 0), #f0f0f0) 0 0 no-repeat padding-box;
+    background: transparent linear-gradient(181deg, rgba(242, 242, 242, 0), #FFFFFF) 0 0 no-repeat padding-box;
     bottom: 0;
   }
   .homebanner .homebanner_content h1 {
-    font: normal normal 600 36px/45px Source Serif Pro;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 45px;
+    font-family: Source Serif Pro;
     color: #1B252C;
     max-width: 100%;
   }
   .homebanner .homebanner_content p {
-    font: normal normal normal 16px/24px Muli;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    font-family: Muli;
     color: #1B252C;
     max-width: 100%;
   }
@@ -6321,6 +6408,9 @@ footer .footer-bottom .left-nav li a {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .category_teaser .category_card {
+    height: 280px;
+  }
   .category_teaser .category_card:not(:first-child) {
     padding-top: 25px;
   }
@@ -6341,10 +6431,16 @@ footer .footer-bottom .left-nav li a {
   }
   .teaserbanner_one .teaserbanner_content h1 {
     padding: 16px 0 8px 0;
-    font: normal normal 600 36px/45px Source Serif Pro;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 45px;
+    font-family: Source Serif Pro;
   }
   .teaserbanner_one .teaserbanner_content p {
-    font: normal normal normal 16px/24px Muli;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    font-family: Muli;
   }
   .teaserbanner_one .teaserbanner_content .action {
     -webkit-box-orient: vertical;
@@ -6407,11 +6503,17 @@ footer .footer-bottom .left-nav li a {
     height: 10rem !important;
   }
   .main_banner .leftside_banner h1 {
-    font: normal normal 600 36px/42px Source Serif Pro;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 42px;
+    font-family: Source Serif Pro;
   }
   .main_banner .leftside_banner h2.hide_head {
     display: block;
-    font: normal normal 600 36px/42px Source Serif Pro;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 42px;
+    font-family: Source Serif Pro;
   }
   .main_banner .leftside_banner .head_border {
     width: 102px;
@@ -6442,23 +6544,35 @@ footer .footer-bottom .left-nav li a {
   .card-container .card .product-details .product-title {
     max-width: 100%;
     color: #1B252C;
-    font: normal normal bold 16px/20px Muli;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    font-family: Muli;
   }
   .card-container .card .product-details .product-price {
-    font: normal normal 600 16px/20px Muli;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    font-family: Muli;
     color: #1B252C;
   }
   footer .footer-top {
     padding: 60px 0 80px 0;
   }
   footer .footer-top .submenu__heading {
-    font: normal normal 600 16px/24px Muli;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    font-family: Muli;
     color: #1B252C;
     padding-bottom: 16px;
     margin-top: 32px !important;
   }
   footer .footer-top a, footer .footer-top p {
-    font: normal normal normal 16px/24px Muli;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    font-family: Muli;
     color: #545D63;
     padding-bottom: 8px;
   }
@@ -6497,7 +6611,10 @@ footer .footer-bottom .left-nav li a {
     padding: 24px 0;
   }
   .product_image .category_left a {
-    font: normal normal normal 16px/24px Muli;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    font-family: Muli;
     color: #1B252C;
   }
   .product_image .main_image figure img {
@@ -6522,11 +6639,17 @@ footer .footer-bottom .left-nav li a {
     display: none;
   }
   .product_details h1 {
-    font: normal normal 600 24px/30px Source Serif Pro;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    font-family: Source Serif Pro;
     padding-top: 20px;
   }
   .product_details h4 {
-    font: normal normal 600 20px/30px Muli;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    font-family: Muli;
     padding-top: 8px 0 17px 0;
   }
   .product_details .addtocart {
@@ -6546,7 +6669,10 @@ footer .footer-bottom .left-nav li a {
     text-align: center;
   }
   .prod_Description h5 {
-    font: normal normal 600 16px/25px Muli;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 25px;
+    font-family: Muli;
   }
   .prod_Description .right_details {
     padding-top: 16px;
@@ -6589,7 +6715,10 @@ footer .footer-bottom .left-nav li a {
     text-align: center;
   }
   .cart .cart_heading h1 {
-    font: normal normal 600 36px/45px Source Serif Pro !important;
+    font-size: 36px !important;
+    font-weight: 600 !important;
+    line-height: 45px !important;
+    font-family: Source Serif Pro !important;
     max-width: 100%;
   }
   .cart .single_cartItem {
@@ -6632,11 +6761,28 @@ footer .footer-bottom .left-nav li a {
   .mobileview_filterheader {
     display: block;
   }
+  .checkout .checkout_heading {
+    padding: 19px 0 32px 0 !important;
+    text-align: center;
+  }
+  .checkout .checkout_heading h1 {
+    padding-bottom: 10px;
+    font-size: 36px !important;
+    font-weight: 600;
+    line-height: 45px;
+    font-family: Source Serif Pro;
+  }
   .checkout .estimating {
     margin-bottom: 0 !important;
   }
   .checkout .checkout_form {
     padding-right: 0 !important;
+  }
+  .checkout .checkout_form h2 {
+    font-size: 24px !important;
+    font-weight: 600;
+    line-height: 30px;
+    font-family: Source Serif Pro;
   }
   .checkout .product_summary {
     border: none;
@@ -6676,7 +6822,7 @@ footer .footer-bottom .left-nav li a {
   }
   .checkout .payment_info .action {
     padding: 32px 0 32px 0;
-    border-bottom: 1px solid #d1d3d6;
+    border-bottom: 1px solid #D1D3D6;
   }
   .checkout .payment_info .action .shipping_button .btn_mobiletext {
     display: block;
@@ -6689,14 +6835,17 @@ footer .footer-bottom .left-nav li a {
   }
   .order_summary h1 {
     padding-bottom: 10px;
-    font: normal normal 600 36px/45px Source Serif Pro;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 45px;
+    font-family: Source Serif Pro;
   }
   .right_details .shipMethod_details {
     padding-top: 32px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1200px) {
   .mobilefilter_menu {
     display: block;
   }
@@ -6705,6 +6854,25 @@ footer .footer-bottom .left-nav li a {
   }
   header .mobileSidebar_menu {
     display: block;
+  }
+  .homebanner .homebanner_content {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  .main_banner .leftside_banner {
+    height: 270px;
+  }
+  .main_banner .rightside_banner img {
+    height: 230px;
+  }
+  .category_card {
+    height: 280px;
+  }
+  .teaserbanner_one .teaserbanner_content {
+    padding: 40px 0 56px 0;
+  }
+  .teaserbanner_one .teaserbanner_image {
+    background-size: 110% 120%;
   }
   .card-container .card {
     padding: 0 11px 16px 0;
@@ -6723,10 +6891,16 @@ footer .footer-bottom .left-nav li a {
   .card-container .card .product-details .product-title {
     max-width: 100%;
     color: #1B252C;
-    font: normal normal bold 16px/20px Muli;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    font-family: Muli;
   }
   .card-container .card .product-details .product-price {
-    font: normal normal 600 16px/20px Muli;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    font-family: Muli;
     color: #1B252C;
   }
   .product_details {
@@ -6736,7 +6910,10 @@ footer .footer-bottom .left-nav li a {
     text-align: center;
   }
   .prod_Description h5 {
-    font: normal normal 600 16px/25px Muli;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 25px;
+    font-family: Muli;
   }
   .prod_Description .right_details {
     padding-top: 16px;
@@ -6767,13 +6944,19 @@ footer .footer-bottom .left-nav li a {
     padding: 60px 0 80px 0;
   }
   footer .footer-top .submenu__heading {
-    font: normal normal 600 16px/24px Muli;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    font-family: Muli;
     color: #1B252C;
     padding-bottom: 16px;
     margin-top: 32px !important;
   }
   footer .footer-top a, footer .footer-top p {
-    font: normal normal normal 16px/24px Muli;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    font-family: Muli;
     color: #545D63;
     padding-bottom: 8px;
   }
@@ -6811,18 +6994,23 @@ footer .footer-bottom .left-nav li a {
     padding-right: 0;
     margin-bottom: 33px;
   }
-  .product_summary {
-    border: none;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    padding: 24px 32px 40px 0;
-  }
   .filter_aside .filter_container .checkbox input {
     width: 18px;
     height: 18px;
   }
   .cartLeft {
     padding-right: 0;
+  }
+  .cart .product_summary {
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 24px 32px 40px 16px;
+  }
+  .cart .product_summary .paypal_btn {
+    width: 37%;
+    margin: 0 auto;
+    margin-top: 24px;
   }
 }
 
@@ -6847,9 +7035,6 @@ footer .footer-bottom .left-nav li a {
             box-shadow: none;
     padding: 24px 32px 40px 0;
   }
-  .product_summary .paypal_btn img {
-    margin-left: 13rem;
-  }
   .teaserbanner_one .teaserbanner_content {
     padding-left: 0;
   }
@@ -6867,13 +7052,19 @@ footer .footer-bottom .left-nav li a {
 }
 
 .single_cartItem .singlecart_middle strong {
-  font: normal normal 600 20px/25px Muli;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  font-family: Muli;
   color: #1B252C;
 }
 
 .single_cartItem .singlecart_middle p {
   padding-top: 8px;
-  font: normal normal normal 16px/24px Muli;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  font-family: Muli;
   color: #1B252C;
 }
 
@@ -6918,13 +7109,19 @@ footer .footer-bottom .left-nav li a {
 .single_cartItem .singleCart_action button {
   background: none;
   color: #1B252C;
-  font: normal normal 600 12px/14px Muli;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+  font-family: Muli;
   border: none;
 }
 
 .single_cartItem .singleCart_action a {
   color: #1B252C;
-  font: normal normal 600 12px/14px Muli;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+  font-family: Muli;
 }
 
 .single_cartItem .singleCart_action img {
@@ -6962,12 +7159,18 @@ footer .footer-bottom .left-nav li a {
 }
 
 .accordion_box .accordion .accordion_left {
-  font: normal normal normal 20px/25px Muli;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 25px;
+  font-family: Muli;
   color: #1B252C;
 }
 
 .accordion_box .accordion .accordion_right {
-  font: normal normal normal 14px/21px Muli;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+  font-family: Muli;
   color: #1B252C;
   text-align: right;
 }
@@ -7001,7 +7204,10 @@ footer .footer-bottom .left-nav li a {
 }
 
 .cart .cart_heading h1 {
-  font: normal normal 600 48px/45px Source Serif Pro;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 45px;
+  font-family: Source Serif Pro;
   color: #1B252C;
   padding-bottom: 10px;
 }
@@ -7024,14 +7230,20 @@ footer .footer-bottom .left-nav li a {
 
 .cart .empty_card {
   text-align: center;
-  color: red;
-  font: normal normal 600 20px/24px muli;
+  color: #C9252D;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  font-family: Muli;
 }
 
 .cart .emptyCard_message {
   padding-top: 16px;
   text-align: center;
-  font: normal normal 600 20px/24px muli;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  font-family: Muli;
 }
 
 .cart .center {
@@ -7058,7 +7270,10 @@ footer .footer-bottom .left-nav li a {
 }
 
 .product_summary h3 {
-  font: normal normal 600 20px/25px Muli;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  font-family: Muli;
   color: #1B252C;
 }
 
@@ -7073,7 +7288,10 @@ footer .footer-bottom .left-nav li a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font: normal normal normal 16px/24px Muli;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  font-family: Muli;
   color: #1B252C;
 }
 
@@ -7114,7 +7332,10 @@ footer .footer-bottom .left-nav li a {
 
 .checkout .checkout_heading h1 {
   padding-bottom: 10px;
-  font: normal normal 600 48px/45px Source Serif Pro;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 45px;
+  font-family: Source Serif Pro;
 }
 
 .checkout .border_link {
@@ -7138,7 +7359,10 @@ footer .footer-bottom .left-nav li a {
 
 .checkout .checkout_form h2 {
   padding-bottom: 20px;
-  font: normal normal 600 36px/30px Source Serif Pro;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 30px;
+  font-family: Source Serif Pro;
   color: #172026;
 }
 
@@ -7151,14 +7375,17 @@ footer .footer-bottom .left-nav li a {
 }
 
 .checkout .estimating .section1, .checkout .estimating .section2 {
-  border-top: 1px solid #d1d3d6;
+  border-top: 1px solid #D1D3D6;
   padding: 24px 0 24px 0;
-  color: #72777F;
-  font: normal normal 600 20px/25px Muli;
+  color: #666666;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  font-family: Muli;
 }
 
 .checkout .estimating .section2, .checkout .estimating .topbottom-border {
-  border-bottom: 1px solid #d1d3d6;
+  border-bottom: 1px solid #D1D3D6;
   padding: 20px 20px 20px 0;
 }
 
@@ -7169,7 +7396,10 @@ footer .footer-bottom .left-nav li a {
 
 .order_summary .ordersum_heading h1 {
   padding-bottom: 10px;
-  font: normal normal 600 48px/45px Source Serif Pro;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 45px;
+  font-family: Source Serif Pro;
 }
 
 .order_summary .border_link {
@@ -7184,7 +7414,10 @@ footer .footer-bottom .left-nav li a {
 }
 
 .order_summary .order_details h3 {
-  font: normal normal 600 20px/25px Muli;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  font-family: Muli;
   letter-spacing: 0px;
   color: #172026;
   padding-bottom: 32px;
@@ -7192,14 +7425,20 @@ footer .footer-bottom .left-nav li a {
 
 .order_summary .order_details h4 {
   padding-bottom: 16px;
-  font: normal normal 600 16px/20px Muli;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  font-family: Muli;
   letter-spacing: 0px;
   color: #172026;
 }
 
 .order_summary .order_details .order_para {
   padding: 16px 0;
-  font: normal normal normal 16px/24px Muli;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  font-family: Muli;
   letter-spacing: 0px;
   color: #172026;
   max-width: 90%;
@@ -7223,7 +7462,10 @@ footer .footer-bottom .left-nav li a {
 
 .order_summary .social_card .follow_link h2 {
   max-width: 100%;
-  font: normal normal 600 36px/45px Source Serif Pro;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 45px;
+  font-family: Source Serif Pro;
   letter-spacing: 0px;
   color: #FFFFFF;
 }
@@ -7265,13 +7507,19 @@ footer .footer-bottom .left-nav li a {
 }
 
 .contact_info h3 {
-  font: normal normal 600 20px/25px Muli;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  font-family: Muli;
   color: #172026;
 }
 
 .contact_info p {
   padding-top: 8px;
-  font: normal normal normal 16px/25px Muli;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 25px;
+  font-family: Muli;
   color: #172026;
 }
 
@@ -7281,18 +7529,25 @@ footer .footer-bottom .left-nav li a {
 
 .contact_info form label {
   padding: 16px 0 8px 0;
-  font: normal normal 600 16px/24px Muli;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  font-family: Muli;
   color: #181C24;
 }
 
 .contact_info form input {
-  font: normal normal normal 16px/19px Muli;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 19px;
+  font-family: Muli;
   color: #91959C;
   width: 100%;
   padding: 11px 0 13px 12px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border: 2px solid #B5B7BC;
   border-radius: 8px;
+  margin-bottom: 16px;
 }
 
 .signIn_summary {
@@ -7317,7 +7572,10 @@ footer .footer-bottom .left-nav li a {
 }
 
 .signIn_summary .signIn_heading h3 {
-  font: normal normal 600 20px/25px Muli;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  font-family: Muli;
   color: #172026;
   max-width: 100%;
 }
@@ -7337,7 +7595,10 @@ footer .footer-bottom .left-nav li a {
 
 .shipping_info h3 {
   padding-bottom: 24px;
-  font: normal normal 600 20px/25px Muli;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  font-family: Muli;
   color: #172026;
 }
 
@@ -7351,12 +7612,18 @@ footer .footer-bottom .left-nav li a {
 
 .shipping_info .shipping_information option, .shipping_info .shipping_information label {
   padding: 32px 0 8px 0;
-  font: normal normal 600 16px/24px Muli;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  font-family: Muli;
   color: #181C24;
 }
 
 .shipping_info .shipping_information select, .shipping_info .shipping_information input {
-  font: normal normal normal 16px/19px Muli;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 19px;
+  font-family: Muli;
   color: #91959C;
   width: 100%;
   padding: 11px 0 13px 12px;
@@ -7399,7 +7666,10 @@ footer .footer-bottom .left-nav li a {
 
 .shipMethod_info form .radio_control label {
   padding-left: 15px;
-  font: normal normal normal 16px/24px Muli;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  font-family: Muli;
   color: #172026;
 }
 
@@ -7431,12 +7701,18 @@ footer .footer-bottom .left-nav li a {
 }
 
 .shipInfo_details h4 {
-  font: normal normal 600 16px/20px Muli;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  font-family: Muli;
   color: #172026;
 }
 
 .shipInfo_details p {
-  font: normal normal normal 16px/24px Muli;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  font-family: Muli;
   color: #535965;
 }
 
@@ -7454,7 +7730,10 @@ footer .footer-bottom .left-nav li a {
   color: #E26A2C;
   text-transform: none;
   border: none;
-  font: normal normal 600 16px/22px Muli;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  font-family: Muli;
 }
 
 .shipInfo_details .shipInfo_details_top .edit_button img {
@@ -7466,7 +7745,10 @@ footer .footer-bottom .left-nav li a {
 
 .payment_info form label {
   padding: 32px 0 8px 0;
-  font: normal normal 600 16px/24px Muli;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  font-family: Muli;
   color: #181C24;
 }
 
@@ -7500,7 +7782,10 @@ footer .footer-bottom .left-nav li a {
 
 .payment_info form .radio_control label {
   padding-left: 15px;
-  font: normal normal normal 16px/24px Muli;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  font-family: Muli;
   color: #172026;
 }
 
@@ -7513,7 +7798,10 @@ footer .footer-bottom .left-nav li a {
 
 .payment_info form .checkbox_control label {
   padding-left: 15px;
-  font: normal normal normal 16px/24px Muli;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  font-family: Muli;
   color: #172026;
 }
 
@@ -7538,8 +7826,8 @@ footer .footer-bottom .left-nav li a {
 }
 
 .payment_info form .paypal_box {
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
+  border-top: 1px solid #B5B7BC;
+  border-bottom: 1px solid #B5B7BC;
 }
 
 .payment_info .help_circle img {
@@ -7557,7 +7845,10 @@ footer .footer-bottom .left-nav li a {
 }
 
 .order_container h4 {
-  font: normal normal 600 16px/20px Muli;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  font-family: Muli;
   color: #172026;
 }
 
@@ -7601,7 +7892,10 @@ footer .footer-bottom .left-nav li a {
 }
 
 .review_order p {
-  font: normal normal normal 16px/24px Muli;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  font-family: Muli;
 }
 
 .review_order p a {
@@ -7624,7 +7918,7 @@ footer .footer-bottom .left-nav li a {
   left: 0;
   width: 100%;
   padding: 0;
-  background-color: white;
+  background-color: #FFFFFF;
   -webkit-box-shadow: 0px 8px 16px #00000026;
           box-shadow: 0px 8px 16px #00000026;
   z-index: 100;
@@ -7677,7 +7971,10 @@ footer .footer-bottom .left-nav li a {
 }
 
 .mobileSidebar_menu nav ul li {
-  font: normal normal 600 16px/24px Muli;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  font-family: Muli;
   color: #1D1D1B;
   letter-spacing: 0.32px;
 }
@@ -7685,7 +7982,10 @@ footer .footer-bottom .left-nav li a {
 .mobileSidebar_menu .navlink {
   padding: 16px 0 16px 24px;
   border-bottom: 2px solid #E5E5E7;
-  font: normal normal normal 16px/24px Muli;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  font-family: Muli;
   color: #172026;
 }
 
@@ -7694,6 +7994,8 @@ footer .footer-bottom .left-nav li a {
   color: white;
   -webkit-box-shadow: 35px 35px 35px #0000000D;
           box-shadow: 35px 35px 35px #0000000D;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .mobileSidebar_menu .Mobile_contactfooter {
@@ -7718,7 +8020,10 @@ footer .footer-bottom .left-nav li a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font: normal normal normal 16px/24px Muli;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  font-family: Muli;
   color: #172026;
 }
 
@@ -7729,7 +8034,7 @@ footer .footer-bottom .left-nav li a {
   bottom: 0;
   left: 10%;
   right: 0;
-  background-color: white;
+  background-color: #FFFFFF;
   height: 200vh;
   -webkit-animation: moveToRight .5s ease-in-out;
           animation: moveToRight .5s ease-in-out;
@@ -7747,7 +8052,10 @@ footer .footer-bottom .left-nav li a {
 }
 
 .mobilefilter_menu h6 {
-  font: normal normal 600 16px/24px Muli;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  font-family: Muli;
   color: #181C24;
 }
 
@@ -7768,7 +8076,10 @@ footer .footer-bottom .left-nav li a {
 }
 
 .mobilefilter_menu nav ul li {
-  font: normal normal 600 16px/24px Muli;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  font-family: Muli;
   color: #1D1D1B;
   letter-spacing: 0.32px;
 }
@@ -7780,10 +8091,11 @@ footer .footer-bottom .left-nav li a {
 
 .mobilefilter_menu .attribute a {
   font-size: 14px;
-  color: #181C24;
+  font-weight: normal;
   line-height: 24px;
-  text-decoration: underline;
   font-family: Muli;
+  color: #181C24;
+  text-decoration: underline;
 }
 
 .mobilefilter_menu .attribute .checkbox {
