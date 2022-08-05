@@ -6,7 +6,7 @@ const MobileFilterBar=({onClose,handleChange,categories})=>{
     onClose();
    }
     return(<>
-             <aside className="mobilefilter_menu container">
+             <aside className="mobilefilter_menu">
             <nav>
                 <ul>
                     <li>Filters</li>

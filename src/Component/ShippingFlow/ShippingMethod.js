@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Button from "../Button/Button";
 import ShippingDetails from "./ShippingDetails";
 const ShippingMethod=({acctwoHandler,accHandler})=>{
-    const [shippingData, setshippingData]=useState(" ");
+    const [shippingData, setshippingData]=useState("Express Delivery (2-5 business days via USPS) $17.95");
     
     let newObject = window.localStorage.getItem("formData");
     console.log(JSON.parse(newObject));
@@ -19,8 +19,8 @@ const formHandler=(e)=>{
         heading="Shipping Information"
         email={getData.email}
         contactDetails={getData.phoneNumber}
-        fullName={getData.firstName + getData.lastName}
-        address= {getData.add1 + getData.add2 + getData.city +" "+getData.state + getData.zip + getData.country}
+        fullName={getData.firstName +" "+ getData.lastName}
+        address= {getData.add1 +" "+ getData.add2 +" "+ getData.city +" "+getData.state+" "+ getData.zip +" "+ getData.country}
         onClick={accHandler}
         />        
         <h3>2. Shipping Method</h3>

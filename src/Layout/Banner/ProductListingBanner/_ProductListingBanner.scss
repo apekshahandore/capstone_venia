@@ -15,7 +15,9 @@
 
   
     h1 {
- 
+        // &::first-letter {
+        //     text-transform:capitalize;
+        // }
         @include mainFont($font-size-48, $line-spacing-60, $font-family-source-serif-pro, $font-weight-600);
             }
         h2.hide_head {

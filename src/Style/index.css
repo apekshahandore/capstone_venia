@@ -6450,7 +6450,7 @@ footer .footer-bottom .left-nav li a {
   .mobilefilter_menu {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
-    display: block;
+    display: block !important;
   }
   .homebanner {
     min-height: 100vh;
@@ -6947,7 +6947,7 @@ footer .footer-bottom .left-nav li a {
 
 @media (min-width: 768px) and (max-width: 1200px) {
   .mobilefilter_menu {
-    display: block;
+    display: block !important;
   }
   header .right_nav ul .texthide {
     display: none !important;
@@ -7518,6 +7518,13 @@ footer .footer-bottom .left-nav li a {
   padding-bottom: 32px;
 }
 
+.order_summary .order_details p {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  font-family: Muli;
+}
+
 .order_summary .order_details h3 {
   font-size: 20px;
   font-weight: 600;
@@ -7549,12 +7556,21 @@ footer .footer-bottom .left-nav li a {
   max-width: 90%;
 }
 
+.order_summary .order_details .left_details .contact_details {
+  color: #535965;
+}
+
 .order_summary .order_details .left_details .address_details {
   padding-top: 16px;
 }
 
+.order_summary .order_details .right_details .shipMethod_details {
+  color: #535965;
+}
+
 .order_summary .order_details .right_details .paymen_details {
   padding-top: 32px;
+  color: #535965;
 }
 
 .order_summary .social_card {
@@ -8110,6 +8126,9 @@ footer .footer-bottom .left-nav li a {
   padding: 16px 24px 16px 24px;
   border-top: 2px solid #E5E5E7;
   border-bottom: 2px solid #E5E5E7;
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
 }
 
 .mobileSidebar_menu .Mobile_contactfooter ul {
@@ -8132,6 +8151,10 @@ footer .footer-bottom .left-nav li a {
   color: #172026;
 }
 
+.mobileSidebar_menu .Mobile_contactfooter ul li:last-child {
+  text-decoration: underline;
+}
+
 .mobilefilter_menu {
   position: absolute;
   z-index: 999;
@@ -8143,6 +8166,7 @@ footer .footer-bottom .left-nav li a {
   height: 200vh;
   -webkit-animation: moveToRight .5s ease-in-out;
           animation: moveToRight .5s ease-in-out;
+  display: none;
 }
 
 @keyframes moveToRight {

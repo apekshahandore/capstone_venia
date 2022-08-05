@@ -7,8 +7,8 @@ const PaymentInfo=({accPay,acctwoHandler,accHandler})=>{
     const [paymentData, setPaymentData]=useState({
         cardName:" ",
         cardNumber:" ",
-        cvv:" ",
-        credit:" ",
+        cvv:"4567",
+        credit:"Credit Card",
     });
     const inputHandler=(e)=>{
         const name= e.target.name;

@@ -9,7 +9,7 @@
     background-color:$white;
     height: 200vh;
     animation: moveToRight .5s ease-in-out;
-    // display: none;
+    display: none;
         @keyframes moveToRight {
             0% {
                 transform: translateX(500px);

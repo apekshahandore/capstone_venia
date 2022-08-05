@@ -3,7 +3,7 @@
 @media (min-width: 0px) and (max-width: 767px) {
     .mobilefilter_menu{
         transition: all 0.3s;
-        display: block;
+        display: block !important;
         }
       
     .homebanner{
@@ -549,7 +549,7 @@ h5{
 
 @media (min-width: 768px) and (max-width: 1200px){
     .mobilefilter_menu{
-        display: block;
+        display: block !important;
         }
 
     header{

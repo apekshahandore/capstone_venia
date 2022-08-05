@@ -29,12 +29,11 @@ const MobileSideBar=({onClose})=>{
                 </div>
          
     <div className="Mobile_contactfooter">
-    <div className="Mobile_contact">
        <ul>
         <li>Account</li>
         <li>Sign In</li>
        </ul>
-    </div>
+   
   
     </div>
 

@@ -52,7 +52,7 @@ let [num, setNum] = useState(1);
                 </div>
                 <div className="prodGallary_images">
                     <Carousel image={image} title={title}/>
-                    </div>
+                </div>
             </div>
         </div>
 

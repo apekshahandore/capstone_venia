@@ -28,10 +28,11 @@ return(
                     <p>{getData.phoneNumber}</p>
                 </div>
                 <div className="address_details">
-                <p>{getData.firstName}{getData.lastName}</p>    
-                    <p>{getData.add1}</p>    
-                    <p>{getData.city}</p>   
-                    <p>{getData.state}</p>   
+                <p>{getData.firstName} {getData.lastName}</p>    
+                    <p>{getData.add1}</p>
+                    <p>{getData.add2} {getData.city}</p>       
+                    <p>{getData.city},{getData.state} {getData.zip}</p>   
+                    <p>{getData.country}</p>   
                 </div>
                    
 
@@ -46,8 +47,8 @@ return(
                     </div>
                     <div className="paymen_details">
                     <h4>Payment Information</h4>
-                    <p>{getpaymentData.credit}Credit Card </p>
-                    <p>Visa ending in 4567{getpaymentData.cvv}</p>
+                    <p>{getpaymentData.credit}</p>
+                    <p>Visa ending in {getpaymentData.cvv}</p>
                     </div>
                 
                 </div>

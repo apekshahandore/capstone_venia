@@ -12,16 +12,16 @@ import electronicsImg from "./Images/prod4.PNG";
 export const navMainMenu=[{
     id:"NMM0", list:"Home", link:"/", 
 },{
-    id:"NMM1", list:"Women", link:"/productListing/women_clothing",
+    id:"NMM1", list:"Women", link:"/category/women's%20clothing",
 },
 {
-    id:"NMM2", list:"Men", link:"/productListing/men_clothing",
+    id:"NMM2", list:"Men", link:"/category/men's%20clothing",
 },
 {
-    id:"NMM3", list:"Electronic", link:"/productListing/electronics",
+    id:"NMM3", list:"Electronic", link:"/category/electronics",
 },
 {
-    id:"NMM4", list:"Jewellery", link:"/productListing/jewelery",
+    id:"NMM4", list:"Jewellery", link:"/category/jewelery",
 },
 ]
 export const category=[{
@@ -29,21 +29,25 @@ export const category=[{
     img:womenImg,
     name:"Shop Women",
     description:"Lorem ipsum dolor sit amet",
+    link:"/category/women's clothing",
 },{
     id:"men",
     img:menImg,
     name:"Shop Men",
     description:"Lorem ipsum dolor sit amet",
+    link:"/category/men's clothing",
 },{
     id:"jwellery",
     img:jwelleryImg,
     name:"Jwellery",
     description:"Lorem ipsum dolor sit amet",
+    link:"/category/jewelery",
 },{
     id:"electronics",
     img:electronicsImg,
     name:"Electronics",
     description:"Lorem ipsum dolor sit amet",
+    link:"/category/electronics",
 }]   
 export const filterCategories=[
     {

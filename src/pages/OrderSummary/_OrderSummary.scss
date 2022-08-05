@@ -1,5 +1,5 @@
 .order_summary{
-    
+  
     .ordersum_heading{
         padding: 33px 0 40px 0;
         text-align: center;
@@ -19,12 +19,14 @@
     
  .order_details{
     padding-bottom: 32px;
-    
+    p{
+        @include mainFont($font-size-16, $line-spacing-24, $font-family-muli,$font-style-normal);
+    }
     h3{
       
         @include mainFont($font-size-20, $line-spacing-25, $font-family-muli,$font-weight-600);
         letter-spacing: 0px;
-        color: #172026;
+        color: $color-172026;
         padding-bottom: 32px;
     }
     h4{
@@ -32,7 +34,7 @@
         
         @include mainFont($font-size-16, $line-spacing-20, $font-family-muli,$font-weight-600);
         letter-spacing: 0px;
-        color: #172026;
+        color: $color-172026;
     }
   
     .order_para{
@@ -40,19 +42,26 @@
    
         @include mainFont($font-size-16, $line-spacing-24, $font-family-muli,$font-style-normal);
         letter-spacing: 0px;
-        color: #172026;
+        color: $color-172026;
         max-width: 90%;
     }
    
     .left_details{
+        .contact_details{
+             color:$gray-d1;
+        }
         .address_details{
             padding-top: 16px;
         }
         
     }
     .right_details{
+        .shipMethod_details{
+            color:$gray-d1;
+        }
         .paymen_details{
             padding-top: 32px;
+            color:$gray-d1;
         }
     }
  }

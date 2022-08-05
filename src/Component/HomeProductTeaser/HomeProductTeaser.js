@@ -7,7 +7,7 @@ const HomeProductTeaser=()=>{
     <div className="category_teaser">
         {
             category.map((curElem)=>{
-                return <CategoryCard key={curElem.id} data={curElem}/>;
+                return <CategoryCard key={curElem.id} data={curElem} link={curElem.link}/>;
             })
         }
       

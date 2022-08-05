@@ -4,6 +4,7 @@ import ProdutListHeader from "../../Component/ProductListHeader/ProductListHeade
 import FilterContainer from "../../Component/FilterContainer/FilterContainer";
 // import MobileSideBar from "../Layout/Navigation/MobileFilterSidebar";
 import React, {useState, useEffect} from "react";
+import { useParams } from "react-router-dom";
 const ProductListing=()=>{
 //addedpart from productContainer start 
     const [data, setData]= useState([]);
@@ -18,6 +19,8 @@ const ProductListing=()=>{
 
         }
     )
+    let categorys = useParams().category;
+
     useEffect(()=>{
         const getProducts =async()=>{
             setLoading(true);
@@ -72,7 +75,7 @@ const ProductListing=()=>{
     return(
     <>
     
-        <ProductListingBanner text={`Men's`}/>
+        <ProductListingBanner text1={`Men's`} text={categorys ? categorys : "All Products"}/>
         <section className="aem-Grid aem-Grid--12 container">
         <ProdutListHeader 
         totalProducts={totalProducts} 
